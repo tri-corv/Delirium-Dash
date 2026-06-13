@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bs3bawha72t55"]
+
+[ext_resource type="Script" uid="uid://c3pck6ycsklox" path="res://scripts/obstacle.gd" id="1_7ukg5"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7ukg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ukg5"]
+size = Vector2(36, 56)
+
+[node name="Obstacle" type="Area2D" unique_id=210312799]
+script = ExtResource("1_7ukg5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=489095298]
+texture = SubResource("PlaceholderTexture2D_7ukg5")
+visible = false
+
+[node name="Body" type="Polygon2D" parent="."]
+color = Color(0.95, 0.22, 0.31, 1)
+polygon = PackedVector2Array(-18, -28, 18, -28, 18, 28, -18, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=720276741]
+shape = SubResource("RectangleShape2D_7ukg5")

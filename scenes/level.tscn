@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cmwhvnj7c44ef"]
+
+[ext_resource type="PackedScene" uid="uid://c62krnwrb30sf" path="res://scenes/player.tscn" id="1_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://bs3bawha72t55" path="res://scenes/obstacle.tscn" id="2_w8frs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
+size = Vector2(2600, 40)
+
+[node name="Level" type="Node2D" unique_id=366259023]
+
+[node name="Background" type="Polygon2D" parent="."]
+color = Color(0.08, 0.09, 0.11, 1)
+polygon = PackedVector2Array(-800, -500, 3600, -500, 3600, 900, -800, 900)
+
+[node name="Player" parent="." unique_id=155201999 instance=ExtResource("1_w7c3h")]
+position = Vector2(150, 280)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1313880567]
+enabled = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+
+[node name="Obstacle_01" parent="." unique_id=210312799 instance=ExtResource("2_w8frs")]
+position = Vector2(500, 322)
+
+[node name="Obstacle_02" parent="." unique_id=2010876184 instance=ExtResource("2_w8frs")]
+position = Vector2(800, 200)
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1912532633]
+position = Vector2(1000, 350)
+
+[node name="Body" type="Polygon2D" parent="Floor"]
+color = Color(0.86, 0.79, 0.55, 1)
+polygon = PackedVector2Array(-1300, -20, 1300, -20, 1300, 20, -1300, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=65966641]
+shape = SubResource("RectangleShape2D_floor")
