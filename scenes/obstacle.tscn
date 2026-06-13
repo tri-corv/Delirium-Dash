@@ -11,10 +11,12 @@ size = Vector2(36, 56)
 script = ExtResource("1_7ukg5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=489095298]
-texture = SubResource("PlaceholderTexture2D_7ukg5")
 visible = false
+z_index = 1
+texture_filter = 1
+texture = SubResource("PlaceholderTexture2D_7ukg5")
 
-[node name="Body" type="Polygon2D" parent="."]
+[node name="Body" type="Polygon2D" parent="." unique_id=814472043]
 color = Color(0.95, 0.22, 0.31, 1)
 polygon = PackedVector2Array(-18, -28, 18, -28, 18, 28, -18, 28)
 
