@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://7tqcecwdjvjp" path="res://assets/player.png" id="2_xu26u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
-size = Vector2(28, 28)
+size = Vector2(28, 55)
 
 [node name="Player" type="CharacterBody2D" unique_id=155201999 groups=["player"]]
 script = ExtResource("1_3vyb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2020220986]
 texture_filter = 1
-position = Vector2(0, -19)
-scale = Vector2(0.17, 0.17)
+position = Vector2(-0.25000396, -19.250004)
+scale = Vector2(0.16899998, 0.16899998)
 texture = ExtResource("2_xu26u")
 
 [node name="Body" type="Polygon2D" parent="." unique_id=1520823626]
@@ -21,6 +21,7 @@ color = Color(0.2, 0.85, 0.58, 1)
 polygon = PackedVector2Array(-14, -14, 14, -14, 14, 14, -14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404403226]
+position = Vector2(0, -13.5)
 shape = SubResource("RectangleShape2D_3vyb7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1017391692]
