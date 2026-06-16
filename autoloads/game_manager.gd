@@ -25,6 +25,8 @@ func reset_level() -> void:
 
 func go_to_pabellon(index: int) -> void:
 	current_pabellon = index
+	# Siempre va a la intro primero
+	get_tree().change_scene_to_file("res://scenes/intro_1.tscn")
 	var scenes = [
 		"res://scenes/levels/pabellon_admision.tscn",
 		"res://scenes/levels/pabellon_hidroterapia.tscn",

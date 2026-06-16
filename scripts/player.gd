@@ -47,3 +47,7 @@ func die() -> void:
 	await get_tree().create_timer(0.35).timeout
 	GameManager.register_crisis()
 	GameManager.reset_level()
+
+func freeze() -> void:
+	is_dead = true
+	velocity = Vector2.ZERO
