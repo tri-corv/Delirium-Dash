@@ -1,6 +1,5 @@
 extends Node2D
 
-const CEILING_SOURCE_ID := 1
 const FLOOR_SOURCE_ID := 10
 
 const FLOOR_TILE := Vector2i(0, 0)
@@ -31,5 +30,5 @@ func _paint_terrain() -> void:
 		if randf() < 0.12:
 			ceiling_tile = CEILING_CRACKED
 
-		terrain.set_cell(Vector2i(column, CEILING_ROW), CEILING_SOURCE_ID, ceiling_tile)
-		terrain.set_cell(Vector2i(column, CEILING_ROW + 1), CEILING_SOURCE_ID, CEILING_TILE)
+		terrain.set_cell(Vector2i(column, CEILING_ROW), FLOOR_SOURCE_ID, ceiling_tile)
+		terrain.set_cell(Vector2i(column, CEILING_ROW + 1), FLOOR_SOURCE_ID, CEILING_TILE)

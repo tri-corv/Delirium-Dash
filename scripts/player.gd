@@ -8,10 +8,11 @@ const JUMP_FORCE: float = -520.0
 const GRAVITY: float = 1200.0
 
 var is_dead: bool = false
+var is_paused: bool = false
 var gravity_direction: int = 1  # 1 = normal, -1 = invertida
 
 func _physics_process(delta: float) -> void:
-	if is_dead:
+	if is_dead or is_paused:
 		return
 
 	# Gravedad (respeta la dirección actual)
@@ -51,3 +52,10 @@ func die() -> void:
 func freeze() -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
+
+func pause_for_interaction() -> void:
+	is_paused = true
+	velocity = Vector2.ZERO
+
+func resume_from_interaction() -> void:
+	is_paused = false
