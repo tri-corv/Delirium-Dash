@@ -35,6 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://2n0fu38hpnv1" path="res://assets/sprites/candle.png" id="29_gur6y"]
 [ext_resource type="Texture2D" uid="uid://dwhct5ctp4pxj" path="res://assets/sprites/Note1.png" id="30_note1"]
 [ext_resource type="Script" uid="uid://cpyhyikm484b2" path="res://scripts/note_interaction.gd" id="31_note_interaction"]
+[ext_resource type="Script" uid="uid://csn0lbgke7y43" path="res://scripts/sanity_hud.gd" id="32_sanity_hud"]
+[ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="37_q4oe8"]
+[ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="38_svjb4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_64w2a"]
 texture = ExtResource("2_8iemx")
@@ -78,7 +81,7 @@ fill = 1
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v3why"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_note_interaction"]
-size = Vector2(110, 160)
+size = Vector2(110, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpun6"]
 size = Vector2(53, 73)
@@ -87,10 +90,10 @@ size = Vector2(53, 73)
 script = ExtResource("5_level")
 
 [node name="Background" type="Polygon2D" parent="." unique_id=1096657747]
-position = Vector2(307.5652, 19.99997)
-scale = Vector2(1.4169564, 1)
+position = Vector2(309, 35)
+scale = Vector2(1.4020644, 1)
 color = Color(0.08, 0.09, 0.11, 1)
-polygon = PackedVector2Array(-800, -500, 5416.14, -507.99997, 5414.433, 197.81448, 5414.232, 281, 5413.0415, 895.99994, -800, 900)
+polygon = PackedVector2Array(-800, -500, 5508.592, -525, 5512.1206, -243.99997, 5510.0034, 200.00003, 5511.415, 317.00003, 5512.1206, 914, -800, 900)
 
 [node name="Terrain" type="TileMapLayer" parent="." unique_id=679485888]
 texture_filter = 1
@@ -148,9 +151,9 @@ off_time = 0.1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="Obstacle_02" unique_id=1623824289]
-position = Vector2(-2.0000753, 92.84801)
-rotation = 1.5707964
-scale = Vector2(1.3774735, 1.4118644)
+position = Vector2(0.9999893, 204)
+rotation = 0.8220501
+scale = Vector2(1.8759854, 1.7471963)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
@@ -174,9 +177,9 @@ off_time = 0.1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="Obstacle_04" unique_id=1607663809]
-position = Vector2(-2.0000753, 92.84801)
-rotation = 1.5707964
-scale = Vector2(1.3774735, 1.4118644)
+position = Vector2(-7.999956, 197)
+rotation = 0.8220501
+scale = Vector2(1.703, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
@@ -200,9 +203,9 @@ off_time = 0.1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="Obstacle_12" unique_id=884400651]
-position = Vector2(-2.0000753, 92.84801)
-rotation = 1.5707964
-scale = Vector2(1.3774735, 1.4118644)
+position = Vector2(-8.000078, 196)
+rotation = 0.8220501
+scale = Vector2(1.703, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
@@ -226,9 +229,9 @@ off_time = 0.1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="Obstacle_13" unique_id=1017779278]
-position = Vector2(-2.0000753, 92.84801)
-rotation = 1.5707964
-scale = Vector2(1.3774735, 1.4118644)
+position = Vector2(-9.000078, 194)
+rotation = 0.8220501
+scale = Vector2(1.703, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
@@ -252,9 +255,9 @@ off_time = 0.1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="Obstacle_05" unique_id=1200780295]
-position = Vector2(-2.0000753, 92.84801)
-rotation = 1.5707964
-scale = Vector2(1.3774735, 1.4118644)
+position = Vector2(-8.000078, 196)
+rotation = 0.8220501
+scale = Vector2(1.703, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
@@ -278,9 +281,9 @@ off_time = 0.1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="Obstacle_06" unique_id=1423151473]
-position = Vector2(1.9999251, 87)
-rotation = 1.5707964
-scale = Vector2(1.3774735, 1.4118644)
+position = Vector2(-8.000074, 195)
+rotation = 0.8220501
+scale = Vector2(1.704, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
@@ -304,9 +307,9 @@ off_time = 0.1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="Obstacle_07" unique_id=754002960]
-position = Vector2(42.999924, 93.999985)
-rotation = 6.2831855
-scale = Vector2(1.3774735, 1.4118644)
+position = Vector2(-9.0000725, 194)
+rotation = 0.8220501
+scale = Vector2(1.704, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
@@ -330,9 +333,9 @@ off_time = 0.1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="Obstacle_08" unique_id=609273115]
-position = Vector2(83.99992, 91)
-rotation = 6.2831855
-scale = Vector2(1.3774735, 1.4118644)
+position = Vector2(-6.9998093, 186)
+rotation = 0.8220501
+scale = Vector2(1.5764302, 1.6097167)
 color = Color(1, 0.9529412, 0.78039217, 1)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
@@ -508,7 +511,7 @@ script = ExtResource("31_note_interaction")
 note_texture = ExtResource("30_note1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoteInteraction" unique_id=123454537]
-position = Vector2(2, -1)
+position = Vector2(2, -17)
 shape = SubResource("RectangleShape2D_note_interaction")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="NoteInteraction" unique_id=1628604863]
@@ -631,6 +634,112 @@ color = Color(1, 0.050000012, 0.050000012, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=519300555]
 color = Color(0.27, 0.336, 0.45, 1)
+
+[node name="SanityHUD" type="CanvasLayer" parent="." unique_id=1275138949]
+layer = 40
+script = ExtResource("32_sanity_hud")
+
+[node name="SanityPanel" type="Control" parent="SanityHUD" unique_id=1070047324]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 22.0
+offset_right = 264.0
+offset_bottom = 70.0
+
+[node name="Label" type="Label" parent="SanityHUD/SanityPanel" unique_id=444177154]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.45882353, 0.10980392, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("37_q4oe8")
+theme_override_font_sizes/font_size = 14
+text = "CORDURA"
+
+[node name="SanityBar" type="ProgressBar" parent="SanityHUD/SanityPanel" unique_id=927357875]
+modulate = Color(1, 0.050980393, 0.050980393, 1)
+layout_mode = 0
+offset_top = 22.0
+offset_right = 240.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.9607843, 0.047058824, 0.047058824, 1)
+value = 100.0
+show_percentage = false
+
+[node name="GameOverScreen" type="Control" parent="SanityHUD" unique_id=198851312]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="SanityHUD/GameOverScreen" unique_id=1542498297]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.86)
+
+[node name="Title" type="Label" parent="SanityHUD/GameOverScreen" unique_id=1822927793]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -70.0
+offset_right = 220.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.45882353, 0.10980392, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("37_q4oe8")
+theme_override_font_sizes/font_size = 48
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="SanityHUD/GameOverScreen" unique_id=548795488]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = 18.0
+offset_right = 240.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78, 0.78, 0.84, 1)
+theme_override_fonts/font = ExtResource("38_svjb4")
+theme_override_font_sizes/font_size = 16
+text = "Este lugar llevó al Dr. Evans a perder la cordura debido a múltiples alucionaciones..."
+horizontal_alignment = 1
+
+[node name="Hint" type="Label" parent="SanityHUD/GameOverScreen" unique_id=602918004]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = 70.0
+offset_right = 260.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.72, 0.72, 0.78, 1)
+theme_override_fonts/font = ExtResource("38_svjb4")
+theme_override_font_sizes/font_size = 14
+text = "R para reiniciar / Esc para salir"
+horizontal_alignment = 1
 
 [editable path="Obstacle_01"]
 [editable path="Obstacle_09"]
