@@ -639,6 +639,16 @@ color = Color(0.27, 0.336, 0.45, 1)
 layer = 40
 script = ExtResource("32_sanity_hud")
 
+[node name="SanityEffect" type="ColorRect" parent="SanityHUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.55, 0, 0, 0)
+
 [node name="SanityPanel" type="Control" parent="SanityHUD" unique_id=1070047324]
 layout_mode = 3
 anchors_preset = 0

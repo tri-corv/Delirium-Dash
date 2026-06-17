@@ -7,14 +7,16 @@ El Dr. Evans desperto en el ala este sin recordar
 como llego. Los pasillos se contraen. Las camas
 vacias no lo estan."
 @export_multiline var objetivo: String = "> Esquiva los obstaculos
-> Llega a la puerta del fondo
-> Recolecta los Frascos de Memoria"
+> Encuentra la Note 1
+> Escapa del pabellón
+> Cuida tu cordura"
 @export_file("*.tscn") var siguiente_escena: String = "res://scenes/level.tscn"
 
 @onready var label_numero: Label = $Control/Level
 @onready var label_nombre: Label = $Control/Title
 @onready var label_contexto: Label = $Control/Lore
 @onready var label_objetivo: Label = $Control/Goal
+@onready var label_prompt: Label = $Control/Prompt
 
 var _transition_started := false
 
@@ -23,6 +25,14 @@ func _ready() -> void:
 	label_nombre.text = nivel_nombre
 	label_contexto.text = contexto
 	label_objetivo.text = objetivo
+	
+	_parpadear_texto()
+
+func _parpadear_texto() -> void:
+	var tween := create_tween()
+	tween.set_loops()
+	tween.tween_property(label_prompt, "modulate:a", 0.2, 0.8)
+	tween.tween_property(label_prompt, "modulate:a", 1.0, 0.8)
 
 func _input(_event: InputEvent) -> void:
 	if _transition_started:

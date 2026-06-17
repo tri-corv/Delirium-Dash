@@ -80,8 +80,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_bml7g")
 theme_override_font_sizes/font_size = 14
 text = "> Esquiva los obstaculos
-> Llega a la puerta del fondo
-> Recolecta los Frascos de Memoria"
+> Encuentra la nota 1
+> Escapa del pabellón"
 horizontal_alignment = 1
 
 [node name="Prompt" type="Label" parent="Control" unique_id=863005171]
@@ -99,5 +99,5 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0.64, 0.64, 0.7, 1)
 theme_override_fonts/font = ExtResource("3_bml7g")
 theme_override_font_sizes/font_size = 14
-text = "Presiona espacio o enter para comenzar"
+text = "Presiona espacio para comenzar"
 horizontal_alignment = 1
