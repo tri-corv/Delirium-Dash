@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccb77lm2qnyvd"
-path="res://.godot/imported/expediente_3.png-d00338508c6f7a03b0b16839bfc0ad36.ctex"
+uid="uid://bm6myu5xrg1u7"
+path="res://.godot/imported/file_01.png-326988f6199dfd39a12e8f053169e617.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/expediente_3.png"
-dest_files=["res://.godot/imported/expediente_3.png-d00338508c6f7a03b0b16839bfc0ad36.ctex"]
+source_file="res://assets/sprites/file_01.png"
+dest_files=["res://.godot/imported/file_01.png-326988f6199dfd39a12e8f053169e617.ctex"]
 
 [params]
 

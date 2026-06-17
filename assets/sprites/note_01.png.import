@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfadvvrgcjwky"
-path="res://.godot/imported/tuberias.png-e848cfe72b4b0898f7ea3b56cfcd2e1d.ctex"
+uid="uid://dwhct5ctp4pxj"
+path="res://.godot/imported/note_01.png-fb8459f6f9d3f24f10ab2aa61ef06f19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/tuberias.png"
-dest_files=["res://.godot/imported/tuberias.png-e848cfe72b4b0898f7ea3b56cfcd2e1d.ctex"]
+source_file="res://assets/sprites/note_01.png"
+dest_files=["res://.godot/imported/note_01.png-fb8459f6f9d3f24f10ab2aa61ef06f19.ctex"]
 
 [params]
 

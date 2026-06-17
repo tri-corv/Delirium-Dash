@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Delirium Dash"
-run/main_scene="uid://bhg3bvnrwm0wn"
+run/main_scene="uid://px3ve7v85m2s"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]

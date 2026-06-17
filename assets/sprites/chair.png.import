@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clwcfne75ynka"
-path="res://.godot/imported/expediente_4.png-73b4c8fc450a3823551e837e85be13f0.ctex"
+uid="uid://ha8x5o4ilkvq"
+path="res://.godot/imported/chair.png-f0a87d226598c4868bf3a609a910107c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/expediente_4.png"
-dest_files=["res://.godot/imported/expediente_4.png-73b4c8fc450a3823551e837e85be13f0.ctex"]
+source_file="res://assets/sprites/chair.png"
+dest_files=["res://.godot/imported/chair.png-f0a87d226598c4868bf3a609a910107c.ctex"]
 
 [params]
 

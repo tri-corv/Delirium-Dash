@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clebob0y4lwa5"
-path="res://.godot/imported/pisos.png-94f06bd754f4d0b066f26130224402cc.ctex"
+uid="uid://c0kl3m7yfsj7p"
+path="res://.godot/imported/syringe_02.png-a2d0b86ce28634822e2e391fe4229ab6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/pisos.png"
-dest_files=["res://.godot/imported/pisos.png-94f06bd754f4d0b066f26130224402cc.ctex"]
+source_file="res://assets/sprites/syringe_02.png"
+dest_files=["res://.godot/imported/syringe_02.png-a2d0b86ce28634822e2e391fe4229ab6.ctex"]
 
 [params]
 

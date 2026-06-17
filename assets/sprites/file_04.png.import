@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db5vktrfva8pk"
-path="res://.godot/imported/sangre_2.png-d321368eb4b71234f0e7340415199831.ctex"
+uid="uid://clwcfne75ynka"
+path="res://.godot/imported/file_04.png-7bbad27977bfd7bb92b454b8f173a137.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sangre_2.png"
-dest_files=["res://.godot/imported/sangre_2.png-d321368eb4b71234f0e7340415199831.ctex"]
+source_file="res://assets/sprites/file_04.png"
+dest_files=["res://.godot/imported/file_04.png-7bbad27977bfd7bb92b454b8f173a137.ctex"]
 
 [params]
 

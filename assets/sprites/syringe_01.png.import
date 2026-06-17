@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm6myu5xrg1u7"
-path="res://.godot/imported/expediente.png-e1989524381d66a5aa242d62917a9048.ctex"
+uid="uid://wm0voh6pj3b8"
+path="res://.godot/imported/syringe_01.png-9d3160e51355da03dc0473e76f7cfa43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/expediente.png"
-dest_files=["res://.godot/imported/expediente.png-e1989524381d66a5aa242d62917a9048.ctex"]
+source_file="res://assets/sprites/syringe_01.png"
+dest_files=["res://.godot/imported/syringe_01.png-9d3160e51355da03dc0473e76f7cfa43.ctex"]
 
 [params]
 

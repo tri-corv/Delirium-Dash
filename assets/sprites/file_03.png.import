@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb1mmrvws85jr"
-path="res://.godot/imported/carrito.png-bd73f4a15c44ae0fe03f088f4b2db497.ctex"
+uid="uid://ccb77lm2qnyvd"
+path="res://.godot/imported/file_03.png-6782dca3e642ffe2a80e4b364a128f75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/carrito.png"
-dest_files=["res://.godot/imported/carrito.png-bd73f4a15c44ae0fe03f088f4b2db497.ctex"]
+source_file="res://assets/sprites/file_03.png"
+dest_files=["res://.godot/imported/file_03.png-6782dca3e642ffe2a80e4b364a128f75.ctex"]
 
 [params]
 

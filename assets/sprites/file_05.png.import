@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wm0voh6pj3b8"
-path="res://.godot/imported/jeringa.png-c4a2327421f5d174a08d9e7da01af114.ctex"
+uid="uid://cyo74ra12dgw6"
+path="res://.godot/imported/file_05.png-a848d6d4b49444b6d09e186415da45e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/jeringa.png"
-dest_files=["res://.godot/imported/jeringa.png-c4a2327421f5d174a08d9e7da01af114.ctex"]
+source_file="res://assets/sprites/file_05.png"
+dest_files=["res://.godot/imported/file_05.png-a848d6d4b49444b6d09e186415da45e4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxeteqvx0ie0a"
-path="res://.godot/imported/escritorio.png-06e03a6bf7ccf4326951bb7cb34424d9.ctex"
+uid="uid://clebob0y4lwa5"
+path="res://.godot/imported/floors.png-b653ea2d8ed749166adf4580c328607b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/escritorio.png"
-dest_files=["res://.godot/imported/escritorio.png-06e03a6bf7ccf4326951bb7cb34424d9.ctex"]
+source_file="res://assets/tiles/floors.png"
+dest_files=["res://.godot/imported/floors.png-b653ea2d8ed749166adf4580c328607b.ctex"]
 
 [params]
 

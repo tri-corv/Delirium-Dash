@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpvpkj62qjcs1"
-path="res://.godot/imported/luz_off.png-b03512bd11c711c7b8788d7dd4295b2d.ctex"
+uid="uid://gjtexwbimrkv"
+path="res://.godot/imported/shelf.png-4aba2d6e3a8cce39a20d8fc69a0cdfdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/luz_off.png"
-dest_files=["res://.godot/imported/luz_off.png-b03512bd11c711c7b8788d7dd4295b2d.ctex"]
+source_file="res://assets/sprites/shelf.png"
+dest_files=["res://.godot/imported/shelf.png-4aba2d6e3a8cce39a20d8fc69a0cdfdd.ctex"]
 
 [params]
 

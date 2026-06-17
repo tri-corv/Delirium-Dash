@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsfdiykac0jgw"
-path="res://.godot/imported/frasco.png-39f87a866392665edaaeb3f0572a9e7d.ctex"
+uid="uid://bkr3kdquwqo45"
+path="res://.godot/imported/screen.png-0cbdfe01752e7829f8f8adbbbc256328.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/frasco.png"
-dest_files=["res://.godot/imported/frasco.png-39f87a866392665edaaeb3f0572a9e7d.ctex"]
+source_file="res://assets/sprites/screen.png"
+dest_files=["res://.godot/imported/screen.png-0cbdfe01752e7829f8f8adbbbc256328.ctex"]
 
 [params]
 

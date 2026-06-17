@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boyhwo35boivl"
-path="res://.godot/imported/cuadro.png-44ebedd077c6505ca97595a041a0ea8e.ctex"
+uid="uid://cb1mmrvws85jr"
+path="res://.godot/imported/cart.png-dc53b21d6e83186283fe6e20d93835a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cuadro.png"
-dest_files=["res://.godot/imported/cuadro.png-44ebedd077c6505ca97595a041a0ea8e.ctex"]
+source_file="res://assets/sprites/cart.png"
+dest_files=["res://.godot/imported/cart.png-dc53b21d6e83186283fe6e20d93835a4.ctex"]
 
 [params]
 

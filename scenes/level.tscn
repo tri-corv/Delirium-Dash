@@ -1,39 +1,39 @@
 [gd_scene format=4 uid="uid://cmwhvnj7c44ef"]
 
 [ext_resource type="PackedScene" uid="uid://c62krnwrb30sf" path="res://scenes/player.tscn" id="1_w7c3h"]
-[ext_resource type="Texture2D" uid="uid://clebob0y4lwa5" path="res://assets/tiles/pisos.png" id="2_8iemx"]
+[ext_resource type="Texture2D" uid="uid://clebob0y4lwa5" path="res://assets/tiles/floors.png" id="2_8iemx"]
 [ext_resource type="PackedScene" uid="uid://bs3bawha72t55" path="res://scenes/obstacle.tscn" id="2_w8frs"]
 [ext_resource type="Texture2D" uid="uid://dectsc8dw4l8b" path="res://assets/tiles/walls.png" id="3_556r4"]
 [ext_resource type="Script" uid="uid://c3pck6ycsklox" path="res://scripts/obstacle.gd" id="3_obstacle"]
-[ext_resource type="Texture2D" uid="uid://bhdoousbua1h6" path="res://assets/sprites/camilla.png" id="3_w8frs"]
+[ext_resource type="Texture2D" uid="uid://bhdoousbua1h6" path="res://assets/sprites/gurney.png" id="3_w8frs"]
 [ext_resource type="Script" uid="uid://dy52e8qkf1i7a" path="res://scripts/level.gd" id="5_level"]
-[ext_resource type="Texture2D" uid="uid://clbfcf2f31eow" path="res://assets/sprites/luz_on.png" id="5_ppgk2"]
-[ext_resource type="Texture2D" uid="uid://bpvpkj62qjcs1" path="res://assets/sprites/luz_off.png" id="6_off"]
+[ext_resource type="Texture2D" uid="uid://clbfcf2f31eow" path="res://assets/sprites/light_on.png" id="5_ppgk2"]
+[ext_resource type="Texture2D" uid="uid://bpvpkj62qjcs1" path="res://assets/sprites/light_off.png" id="6_off"]
 [ext_resource type="Script" uid="uid://e6scwvrkk0lg" path="res://scripts/flicker_light.gd" id="7_flicker"]
-[ext_resource type="Script" uid="uid://cdxcv474nrytj" path="res://scenes/light_effect.gd" id="7_gur6y"]
+[ext_resource type="Script" uid="uid://cdxcv474nrytj" path="res://scripts/light_effect.gd" id="7_gur6y"]
 [ext_resource type="Texture2D" uid="uid://drd70o8akuar4" path="res://assets/sprites/puerta.jpg" id="8_b121j"]
-[ext_resource type="Texture2D" uid="uid://bm6myu5xrg1u7" path="res://assets/sprites/expediente.png" id="10_olg7q"]
-[ext_resource type="Texture2D" uid="uid://ha8x5o4ilkvq" path="res://assets/sprites/Silla.png" id="13_64w2a"]
-[ext_resource type="Texture2D" uid="uid://cyo74ra12dgw6" path="res://assets/sprites/expediente_5.png" id="13_wc255"]
-[ext_resource type="Texture2D" uid="uid://clwcfne75ynka" path="res://assets/sprites/expediente_4.png" id="14_82cfe"]
-[ext_resource type="Texture2D" uid="uid://b25i2w1hpsc0v" path="res://assets/sprites/sangre.png" id="15_gunhw"]
+[ext_resource type="Texture2D" uid="uid://bm6myu5xrg1u7" path="res://assets/sprites/file_01.png" id="10_olg7q"]
+[ext_resource type="Texture2D" uid="uid://ha8x5o4ilkvq" path="res://assets/sprites/chair.png" id="13_64w2a"]
+[ext_resource type="Texture2D" uid="uid://cyo74ra12dgw6" path="res://assets/sprites/file_05.png" id="13_wc255"]
+[ext_resource type="Texture2D" uid="uid://clwcfne75ynka" path="res://assets/sprites/file_04.png" id="14_82cfe"]
+[ext_resource type="Texture2D" uid="uid://b25i2w1hpsc0v" path="res://assets/sprites/blood_01.png" id="15_gunhw"]
 [ext_resource type="PackedScene" uid="uid://bwbsd08i2vsr5" path="res://scenes/door.tscn" id="16_arp2o"]
-[ext_resource type="Texture2D" uid="uid://db5vktrfva8pk" path="res://assets/sprites/sangre_2.png" id="16_gunhw"]
-[ext_resource type="Texture2D" uid="uid://ccb77lm2qnyvd" path="res://assets/sprites/expediente_3.png" id="17_8gofh"]
-[ext_resource type="Texture2D" uid="uid://c0kl3m7yfsj7p" path="res://assets/sprites/jeringa_02.png" id="17_cmcjb"]
+[ext_resource type="Texture2D" uid="uid://db5vktrfva8pk" path="res://assets/sprites/blood_02.png" id="16_gunhw"]
+[ext_resource type="Texture2D" uid="uid://ccb77lm2qnyvd" path="res://assets/sprites/file_03.png" id="17_8gofh"]
+[ext_resource type="Texture2D" uid="uid://c0kl3m7yfsj7p" path="res://assets/sprites/syringe_02.png" id="17_cmcjb"]
 [ext_resource type="Texture2D" uid="uid://ml6yj40r06ar" path="res://assets/sprites/window.png" id="20_5k0ak"]
-[ext_resource type="Texture2D" uid="uid://dqio7g8qg23gn" path="res://assets/sprites/expediente_2.png" id="21_wu01b"]
-[ext_resource type="Texture2D" uid="uid://bkr3kdquwqo45" path="res://assets/sprites/mampara.png" id="22_3ies3"]
-[ext_resource type="Texture2D" uid="uid://cxeteqvx0ie0a" path="res://assets/sprites/escritorio.png" id="23_xy2fk"]
+[ext_resource type="Texture2D" uid="uid://dqio7g8qg23gn" path="res://assets/sprites/file_02.png" id="21_wu01b"]
+[ext_resource type="Texture2D" uid="uid://bkr3kdquwqo45" path="res://assets/sprites/screen.png" id="22_3ies3"]
+[ext_resource type="Texture2D" uid="uid://cxeteqvx0ie0a" path="res://assets/sprites/desk.png" id="23_xy2fk"]
 [ext_resource type="Texture2D" uid="uid://cenl18x7a183l" path="res://assets/sprites/drugs.png" id="24_556r4"]
 [ext_resource type="Texture2D" uid="uid://23cvhduwota0" path="res://assets/sprites/library.png" id="24_cmcjb"]
 [ext_resource type="Texture2D" uid="uid://hm7ei2qs1co5" path="res://assets/sprites/books.png" id="25_7agi7"]
-[ext_resource type="Texture2D" uid="uid://cb1mmrvws85jr" path="res://assets/sprites/carrito.png" id="25_556r4"]
-[ext_resource type="Texture2D" uid="uid://boyhwo35boivl" path="res://assets/sprites/cuadro.png" id="26_7agi7"]
+[ext_resource type="Texture2D" uid="uid://cb1mmrvws85jr" path="res://assets/sprites/cart.png" id="25_556r4"]
+[ext_resource type="Texture2D" uid="uid://boyhwo35boivl" path="res://assets/sprites/painting.png" id="26_7agi7"]
 [ext_resource type="Texture2D" uid="uid://cfg62griy5gti" path="res://assets/sprites/papers.png" id="27_kih21"]
-[ext_resource type="Texture2D" uid="uid://gjtexwbimrkv" path="res://assets/sprites/estante.png" id="28_2e2fo"]
+[ext_resource type="Texture2D" uid="uid://gjtexwbimrkv" path="res://assets/sprites/shelf.png" id="28_2e2fo"]
 [ext_resource type="Texture2D" uid="uid://2n0fu38hpnv1" path="res://assets/sprites/candle.png" id="29_gur6y"]
-[ext_resource type="Texture2D" uid="uid://dwhct5ctp4pxj" path="res://assets/sprites/Note1.png" id="30_note1"]
+[ext_resource type="Texture2D" uid="uid://dwhct5ctp4pxj" path="res://assets/sprites/note_01.png" id="30_note1"]
 [ext_resource type="Script" uid="uid://cpyhyikm484b2" path="res://scripts/note_interaction.gd" id="31_note_interaction"]
 [ext_resource type="Script" uid="uid://csn0lbgke7y43" path="res://scripts/sanity_hud.gd" id="32_sanity_hud"]
 [ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="37_q4oe8"]
@@ -90,7 +90,7 @@ size = Vector2(53, 73)
 script = ExtResource("5_level")
 
 [node name="Background" type="Polygon2D" parent="." unique_id=1096657747]
-position = Vector2(309, 35)
+position = Vector2(301.00003, 87)
 scale = Vector2(1.4020644, 1)
 color = Color(0.08, 0.09, 0.11, 1)
 polygon = PackedVector2Array(-800, -500, 5508.592, -525, 5512.1206, -243.99997, 5510.0034, 200.00003, 5511.415, 317.00003, 5512.1206, 914, -800, 900)
@@ -109,36 +109,36 @@ position = Vector2(150, 307)
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 
-[node name="Obstacle_01" parent="." unique_id=210312799 instance=ExtResource("2_w8frs")]
+[node name="Gurney_01" parent="." unique_id=210312799 instance=ExtResource("2_w8frs")]
 position = Vector2(500, 330)
 rotation = 0.34906584
 
-[node name="Sprite2D" parent="Obstacle_01" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Gurney_01" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_w8frs")
 
-[node name="Body" parent="Obstacle_01" index="1" unique_id=814472043]
+[node name="Body" parent="Gurney_01" index="1" unique_id=814472043]
 visible = false
 
-[node name="Obstacle_09" parent="." unique_id=2070661537 instance=ExtResource("2_w8frs")]
+[node name="Gurney_02" parent="." unique_id=2070661537 instance=ExtResource("2_w8frs")]
 position = Vector2(6700, 330)
 rotation = 0.34906584
 
-[node name="Sprite2D" parent="Obstacle_09" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Gurney_02" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_w8frs")
 
-[node name="Body" parent="Obstacle_09" index="1" unique_id=814472043]
+[node name="Body" parent="Gurney_02" index="1" unique_id=814472043]
 visible = false
 
-[node name="Obstacle_02" parent="." unique_id=2010876184 instance=ExtResource("2_w8frs")]
+[node name="Light_01" parent="." unique_id=2010876184 instance=ExtResource("2_w8frs")]
 texture_filter = 1
 position = Vector2(450, 140)
 script = ExtResource("7_gur6y")
 
-[node name="Sprite2D" parent="Obstacle_02" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Light_01" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_ppgk2")
@@ -147,24 +147,24 @@ on_texture = ExtResource("5_ppgk2")
 off_texture = ExtResource("6_off")
 off_time = 0.1
 
-[node name="Body" parent="Obstacle_02" index="1" unique_id=814472043]
+[node name="Body" parent="Light_01" index="1" unique_id=814472043]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="Obstacle_02" unique_id=1623824289]
+[node name="PointLight2D" type="PointLight2D" parent="Light_01" unique_id=1623824289]
 position = Vector2(0.9999893, 204)
 rotation = 0.8220501
 scale = Vector2(1.8759854, 1.7471963)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
-[node name="Timer" type="Timer" parent="Obstacle_02" unique_id=741196810]
+[node name="Timer" type="Timer" parent="Light_01" unique_id=741196810]
 
-[node name="Obstacle_04" parent="." unique_id=755726065 instance=ExtResource("2_w8frs")]
+[node name="Light_02" parent="." unique_id=755726065 instance=ExtResource("2_w8frs")]
 texture_filter = 1
 position = Vector2(1200, 140)
 script = ExtResource("7_gur6y")
 
-[node name="Sprite2D" parent="Obstacle_04" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Light_02" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_ppgk2")
@@ -173,24 +173,24 @@ on_texture = ExtResource("5_ppgk2")
 off_texture = ExtResource("6_off")
 off_time = 0.1
 
-[node name="Body" parent="Obstacle_04" index="1" unique_id=814472043]
+[node name="Body" parent="Light_02" index="1" unique_id=814472043]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="Obstacle_04" unique_id=1607663809]
+[node name="PointLight2D" type="PointLight2D" parent="Light_02" unique_id=1607663809]
 position = Vector2(-7.999956, 197)
 rotation = 0.8220501
 scale = Vector2(1.703, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
-[node name="Timer" type="Timer" parent="Obstacle_04" unique_id=1055768900]
+[node name="Timer" type="Timer" parent="Light_02" unique_id=1055768900]
 
-[node name="Obstacle_12" parent="." unique_id=1878442203 instance=ExtResource("2_w8frs")]
+[node name="Light_03" parent="." unique_id=1878442203 instance=ExtResource("2_w8frs")]
 texture_filter = 1
 position = Vector2(3670, 140)
 script = ExtResource("7_gur6y")
 
-[node name="Sprite2D" parent="Obstacle_12" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Light_03" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_ppgk2")
@@ -199,24 +199,24 @@ on_texture = ExtResource("5_ppgk2")
 off_texture = ExtResource("6_off")
 off_time = 0.1
 
-[node name="Body" parent="Obstacle_12" index="1" unique_id=814472043]
+[node name="Body" parent="Light_03" index="1" unique_id=814472043]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="Obstacle_12" unique_id=884400651]
+[node name="PointLight2D" type="PointLight2D" parent="Light_03" unique_id=884400651]
 position = Vector2(-8.000078, 196)
 rotation = 0.8220501
 scale = Vector2(1.703, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
-[node name="Timer" type="Timer" parent="Obstacle_12" unique_id=285453483]
+[node name="Timer" type="Timer" parent="Light_03" unique_id=285453483]
 
-[node name="Obstacle_13" parent="." unique_id=2113922783 instance=ExtResource("2_w8frs")]
+[node name="Light_04" parent="." unique_id=2113922783 instance=ExtResource("2_w8frs")]
 texture_filter = 1
 position = Vector2(6650, 140)
 script = ExtResource("7_gur6y")
 
-[node name="Sprite2D" parent="Obstacle_13" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Light_04" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_ppgk2")
@@ -225,24 +225,24 @@ on_texture = ExtResource("5_ppgk2")
 off_texture = ExtResource("6_off")
 off_time = 0.1
 
-[node name="Body" parent="Obstacle_13" index="1" unique_id=814472043]
+[node name="Body" parent="Light_04" index="1" unique_id=814472043]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="Obstacle_13" unique_id=1017779278]
+[node name="PointLight2D" type="PointLight2D" parent="Light_04" unique_id=1017779278]
 position = Vector2(-9.000078, 194)
 rotation = 0.8220501
 scale = Vector2(1.703, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
-[node name="Timer" type="Timer" parent="Obstacle_13" unique_id=392678951]
+[node name="Timer" type="Timer" parent="Light_04" unique_id=392678951]
 
-[node name="Obstacle_05" parent="." unique_id=1568920528 instance=ExtResource("2_w8frs")]
+[node name="Light_05" parent="." unique_id=1568920528 instance=ExtResource("2_w8frs")]
 texture_filter = 1
 position = Vector2(2600, 140)
 script = ExtResource("7_gur6y")
 
-[node name="Sprite2D" parent="Obstacle_05" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Light_05" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_ppgk2")
@@ -251,24 +251,24 @@ on_texture = ExtResource("5_ppgk2")
 off_texture = ExtResource("6_off")
 off_time = 0.1
 
-[node name="Body" parent="Obstacle_05" index="1" unique_id=814472043]
+[node name="Body" parent="Light_05" index="1" unique_id=814472043]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="Obstacle_05" unique_id=1200780295]
+[node name="PointLight2D" type="PointLight2D" parent="Light_05" unique_id=1200780295]
 position = Vector2(-8.000078, 196)
 rotation = 0.8220501
 scale = Vector2(1.703, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
-[node name="Timer" type="Timer" parent="Obstacle_05" unique_id=1128802172]
+[node name="Timer" type="Timer" parent="Light_05" unique_id=1128802172]
 
-[node name="Obstacle_06" parent="." unique_id=993602937 instance=ExtResource("2_w8frs")]
+[node name="Light_06" parent="." unique_id=993602937 instance=ExtResource("2_w8frs")]
 texture_filter = 1
 position = Vector2(7300, 140)
 script = ExtResource("7_gur6y")
 
-[node name="Sprite2D" parent="Obstacle_06" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Light_06" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_ppgk2")
@@ -277,24 +277,24 @@ on_texture = ExtResource("5_ppgk2")
 off_texture = ExtResource("6_off")
 off_time = 0.1
 
-[node name="Body" parent="Obstacle_06" index="1" unique_id=814472043]
+[node name="Body" parent="Light_06" index="1" unique_id=814472043]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="Obstacle_06" unique_id=1423151473]
+[node name="PointLight2D" type="PointLight2D" parent="Light_06" unique_id=1423151473]
 position = Vector2(-8.000074, 195)
 rotation = 0.8220501
 scale = Vector2(1.704, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
-[node name="Timer" type="Timer" parent="Obstacle_06" unique_id=204967324]
+[node name="Timer" type="Timer" parent="Light_06" unique_id=204967324]
 
-[node name="Obstacle_07" parent="." unique_id=1132298544 instance=ExtResource("2_w8frs")]
+[node name="Light_07" parent="." unique_id=1132298544 instance=ExtResource("2_w8frs")]
 texture_filter = 1
 position = Vector2(5200, 140)
 script = ExtResource("7_gur6y")
 
-[node name="Sprite2D" parent="Obstacle_07" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Light_07" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_ppgk2")
@@ -303,24 +303,24 @@ on_texture = ExtResource("5_ppgk2")
 off_texture = ExtResource("6_off")
 off_time = 0.1
 
-[node name="Body" parent="Obstacle_07" index="1" unique_id=814472043]
+[node name="Body" parent="Light_07" index="1" unique_id=814472043]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="Obstacle_07" unique_id=754002960]
+[node name="PointLight2D" type="PointLight2D" parent="Light_07" unique_id=754002960]
 position = Vector2(-9.0000725, 194)
 rotation = 0.8220501
 scale = Vector2(1.704, 1.747)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
-[node name="Timer" type="Timer" parent="Obstacle_07" unique_id=1101797617]
+[node name="Timer" type="Timer" parent="Light_07" unique_id=1101797617]
 
-[node name="Obstacle_08" parent="." unique_id=216950954 instance=ExtResource("2_w8frs")]
+[node name="Light_08" parent="." unique_id=216950954 instance=ExtResource("2_w8frs")]
 texture_filter = 1
 position = Vector2(7860, 140)
 script = ExtResource("7_gur6y")
 
-[node name="Sprite2D" parent="Obstacle_08" index="0" unique_id=489095298]
+[node name="Sprite2D" parent="Light_08" index="0" unique_id=489095298]
 visible = true
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_ppgk2")
@@ -329,10 +329,10 @@ on_texture = ExtResource("5_ppgk2")
 off_texture = ExtResource("6_off")
 off_time = 0.1
 
-[node name="Body" parent="Obstacle_08" index="1" unique_id=814472043]
+[node name="Body" parent="Light_08" index="1" unique_id=814472043]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="Obstacle_08" unique_id=609273115]
+[node name="PointLight2D" type="PointLight2D" parent="Light_08" unique_id=609273115]
 position = Vector2(-6.9998093, 186)
 rotation = 0.8220501
 scale = Vector2(1.5764302, 1.6097167)
@@ -340,40 +340,40 @@ color = Color(1, 0.9529412, 0.78039217, 1)
 texture = SubResource("GradientTexture2D_gur6y")
 height = 256.0
 
-[node name="Timer" type="Timer" parent="Obstacle_08" unique_id=1472472917]
+[node name="Timer" type="Timer" parent="Light_08" unique_id=1472472917]
 
 [node name="Decoration" type="Node2D" parent="." unique_id=1457704976]
 
-[node name="Expedient_01" type="Sprite2D" parent="Decoration" unique_id=223794577]
+[node name="File_01" type="Sprite2D" parent="Decoration" unique_id=223794577]
 position = Vector2(6100, 350)
 rotation = 0.64751714
 scale = Vector2(0.17, 0.17)
 skew = 0.79063416
 texture = ExtResource("10_olg7q")
 
-[node name="Expedient_05" type="Sprite2D" parent="Decoration" unique_id=16774479]
+[node name="File_02" type="Sprite2D" parent="Decoration" unique_id=16774479]
 position = Vector2(5850, 350)
 rotation = 0.64751714
 scale = Vector2(0.17, 0.17)
 skew = 0.79063416
 texture = ExtResource("10_olg7q")
 
-[node name="Paper_01" type="Sprite2D" parent="Decoration" unique_id=147055130]
+[node name="File_03" type="Sprite2D" parent="Decoration" unique_id=147055130]
 position = Vector2(5920, 354)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("13_wc255")
 
-[node name="Door" type="Sprite2D" parent="Decoration" unique_id=115910299]
+[node name="Door_01" type="Sprite2D" parent="Decoration" unique_id=115910299]
 position = Vector2(-375, 265)
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("8_b121j")
 
-[node name="Door2" type="Sprite2D" parent="Decoration" unique_id=677695032]
+[node name="Door_02" type="Sprite2D" parent="Decoration" unique_id=677695032]
 position = Vector2(5300, 285)
 scale = Vector2(0.12, 0.12)
 texture = ExtResource("8_b121j")
 
-[node name="Expedient_02" type="Sprite2D" parent="Decoration" unique_id=493092305]
+[node name="File_04" type="Sprite2D" parent="Decoration" unique_id=493092305]
 position = Vector2(6100, 250)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("14_82cfe")
@@ -399,14 +399,14 @@ position = Vector2(5700, 240)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("16_gunhw")
 
-[node name="Expedient_03" type="Sprite2D" parent="Decoration" unique_id=711131630]
+[node name="File_05" type="Sprite2D" parent="Decoration" unique_id=711131630]
 position = Vector2(6000, 350)
 rotation = 0.9477138
 scale = Vector2(0.17, 0.17)
 skew = 0.38571778
 texture = ExtResource("17_8gofh")
 
-[node name="Expedient_06" type="Sprite2D" parent="Decoration" unique_id=279515423]
+[node name="File_06" type="Sprite2D" parent="Decoration" unique_id=279515423]
 position = Vector2(5830, 350)
 rotation = 0.9477138
 scale = Vector2(0.17, 0.17)
@@ -439,12 +439,12 @@ position = Vector2(6000, 230)
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("20_5k0ak")
 
-[node name="Expedient_04" type="Sprite2D" parent="Decoration" unique_id=1057683344]
+[node name="File_07" type="Sprite2D" parent="Decoration" unique_id=1057683344]
 position = Vector2(5900, 230)
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("21_wu01b")
 
-[node name="Mampara" type="Sprite2D" parent="Decoration" unique_id=1571809564]
+[node name="Screen" type="Sprite2D" parent="Decoration" unique_id=1571809564]
 position = Vector2(6989, 290)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("22_3ies3")
@@ -459,7 +459,7 @@ position = Vector2(1850, 280)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("24_cmcjb")
 
-[node name="Nurse" type="Sprite2D" parent="Decoration" unique_id=1126105674]
+[node name="Cart" type="Sprite2D" parent="Decoration" unique_id=1126105674]
 position = Vector2(894.9456, 309.9)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("25_556r4")
@@ -475,7 +475,7 @@ position = Vector2(1800, 350)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("25_7agi7")
 
-[node name="Cuadro" type="Sprite2D" parent="Decoration" unique_id=736274211]
+[node name="Painting" type="Sprite2D" parent="Decoration" unique_id=736274211]
 position = Vector2(-10.999999, 244.99998)
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("26_7agi7")
@@ -488,7 +488,7 @@ scale = Vector2(0.06797386, 0.07205882)
 skew = 0.94596845
 texture = ExtResource("27_kih21")
 
-[node name="Estantería" type="Sprite2D" parent="Decoration" unique_id=77439543]
+[node name="Shelf" type="Sprite2D" parent="Decoration" unique_id=77439543]
 position = Vector2(7430, 272)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("28_2e2fo")
@@ -584,55 +584,55 @@ theme_override_font_sizes/font_size = 15
 text = "Presiona Enter para cerrar"
 horizontal_alignment = 1
 
-[node name="Obstacle_03" type="Area2D" parent="." unique_id=1065257280]
+[node name="Chair_01" type="Area2D" parent="." unique_id=1065257280]
 position = Vector2(1250, 335)
 script = ExtResource("3_obstacle")
 
-[node name="Sprite2D" type="Sprite2D" parent="Obstacle_03" unique_id=1331899527]
+[node name="Sprite2D" type="Sprite2D" parent="Chair_01" unique_id=1331899527]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("13_64w2a")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle_03" unique_id=1134239109]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair_01" unique_id=1134239109]
 position = Vector2(1.5, -5.5)
 shape = SubResource("RectangleShape2D_fpun6")
 
-[node name="Body" type="Polygon2D" parent="Obstacle_03" unique_id=1562876217]
+[node name="Body" type="Polygon2D" parent="Chair_01" unique_id=1562876217]
 color = Color(1, 0.050000012, 0.050000012, 1)
 
-[node name="Obstacle_10" type="Area2D" parent="." unique_id=5262972]
+[node name="Chair_02" type="Area2D" parent="." unique_id=5262972]
 position = Vector2(2600, 335)
 script = ExtResource("3_obstacle")
 
-[node name="Sprite2D" type="Sprite2D" parent="Obstacle_10" unique_id=922262764]
+[node name="Sprite2D" type="Sprite2D" parent="Chair_02" unique_id=922262764]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("13_64w2a")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle_10" unique_id=1994149425]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair_02" unique_id=1994149425]
 position = Vector2(1.5, -5.5)
 shape = SubResource("RectangleShape2D_fpun6")
 
-[node name="Body" type="Polygon2D" parent="Obstacle_10" unique_id=528784759]
+[node name="Body" type="Polygon2D" parent="Chair_02" unique_id=528784759]
 color = Color(1, 0.050000012, 0.050000012, 1)
 
-[node name="Obstacle_11" type="Area2D" parent="." unique_id=782493100]
+[node name="Chair_03" type="Area2D" parent="." unique_id=782493100]
 position = Vector2(3700, 335)
 rotation = 1.5707964
 script = ExtResource("3_obstacle")
 
-[node name="Sprite2D" type="Sprite2D" parent="Obstacle_11" unique_id=197202430]
+[node name="Sprite2D" type="Sprite2D" parent="Chair_03" unique_id=197202430]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("13_64w2a")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle_11" unique_id=2100789097]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair_03" unique_id=2100789097]
 position = Vector2(1.5, -5.5)
 shape = SubResource("RectangleShape2D_fpun6")
 
-[node name="Body" type="Polygon2D" parent="Obstacle_11" unique_id=1063774490]
+[node name="Body" type="Polygon2D" parent="Chair_03" unique_id=1063774490]
 color = Color(1, 0.050000012, 0.050000012, 1)
 
 [node name="Door" parent="." unique_id=570568136 instance=ExtResource("16_arp2o")]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=519300555]
+[node name="Atmosphere" type="CanvasModulate" parent="." unique_id=519300555]
 color = Color(0.27, 0.336, 0.45, 1)
 
 [node name="SanityHUD" type="CanvasLayer" parent="." unique_id=1275138949]
@@ -741,13 +741,13 @@ theme_override_font_sizes/font_size = 14
 text = "R para reiniciar / Esc para salir"
 horizontal_alignment = 1
 
-[editable path="Obstacle_01"]
-[editable path="Obstacle_09"]
-[editable path="Obstacle_02"]
-[editable path="Obstacle_04"]
-[editable path="Obstacle_12"]
-[editable path="Obstacle_13"]
-[editable path="Obstacle_05"]
-[editable path="Obstacle_06"]
-[editable path="Obstacle_07"]
-[editable path="Obstacle_08"]
+[editable path="Gurney_01"]
+[editable path="Gurney_02"]
+[editable path="Light_01"]
+[editable path="Light_02"]
+[editable path="Light_03"]
+[editable path="Light_04"]
+[editable path="Light_05"]
+[editable path="Light_06"]
+[editable path="Light_07"]
+[editable path="Light_08"]

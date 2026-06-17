@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhdoousbua1h6"
-path="res://.godot/imported/camilla.png-83011d210dd91c4cf5264897203885b4.ctex"
+uid="uid://cxeteqvx0ie0a"
+path="res://.godot/imported/desk.png-6f1a1464d6a0a7be6e012da68f63c116.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/camilla.png"
-dest_files=["res://.godot/imported/camilla.png-83011d210dd91c4cf5264897203885b4.ctex"]
+source_file="res://assets/sprites/desk.png"
+dest_files=["res://.godot/imported/desk.png-6f1a1464d6a0a7be6e012da68f63c116.ctex"]
 
 [params]
 

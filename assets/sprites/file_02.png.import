@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clbfcf2f31eow"
-path="res://.godot/imported/luz_on.png-e38ef1b265e22379ca8daae93d19d6d8.ctex"
+uid="uid://dqio7g8qg23gn"
+path="res://.godot/imported/file_02.png-3b3489d0cdf8cd4a2252ea4d5269abc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/luz_on.png"
-dest_files=["res://.godot/imported/luz_on.png-e38ef1b265e22379ca8daae93d19d6d8.ctex"]
+source_file="res://assets/sprites/file_02.png"
+dest_files=["res://.godot/imported/file_02.png-3b3489d0cdf8cd4a2252ea4d5269abc9.ctex"]
 
 [params]
 

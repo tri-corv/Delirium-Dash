@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqio7g8qg23gn"
-path="res://.godot/imported/expediente_2.png-c62d1170675b38922d2e62a9de3fefc7.ctex"
+uid="uid://b25i2w1hpsc0v"
+path="res://.godot/imported/blood_01.png-777fdeb6f85e0d715b5c0ffd5d298261.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/expediente_2.png"
-dest_files=["res://.godot/imported/expediente_2.png-c62d1170675b38922d2e62a9de3fefc7.ctex"]
+source_file="res://assets/sprites/blood_01.png"
+dest_files=["res://.godot/imported/blood_01.png-777fdeb6f85e0d715b5c0ffd5d298261.ctex"]
 
 [params]
 

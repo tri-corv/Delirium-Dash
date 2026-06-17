@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://px3ve7v85m2s"]
+
+[ext_resource type="Script" uid="uid://cqaq706ofitbd" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_wu84c"]
+[ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="3_8ln24"]
+[ext_resource type="Shader" uid="uid://6qh5qnrt4660" path="res://shaders/glitch.gdshader" id="4_wu84c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ln24"]
+shader = ExtResource("4_wu84c")
+shader_parameter/glitch_intensity = 0.0
+shader_parameter/time_speed = 5.0
+
+[node name="Delirium-Dash" type="CanvasLayer" unique_id=1635237367]
+script = ExtResource("1_bqqt6")
+
+[node name="Control" type="Control" parent="." unique_id=1170314191]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=655999709]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 1153.0
+offset_bottom = 644.0
+color = Color(0, 0, 0, 1)
+
+[node name="Game Title" type="Label" parent="Control" unique_id=640198212]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 285.0
+offset_right = 885.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0.46, 0.11055333, 0.064399995, 1)
+theme_override_colors/font_outline_color = Color(0.54509807, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_wu84c")
+theme_override_font_sizes/font_size = 45
+text = "DELIRIUM DASH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Press" type="Label" parent="Control" unique_id=1579416414]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 363.0
+offset_right = 746.0
+offset_bottom = 418.0
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 21
+text = "Presiona ESPACIO para comenzar
+"
+horizontal_alignment = 1
+
+[node name="Instructions" type="Label" parent="Control" unique_id=936386349]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 490.0
+offset_right = 665.0
+offset_bottom = 556.0
+theme_override_colors/font_color = Color(0.45882353, 0.10980392, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("3_8ln24")
+text = "[Espacio] para saltar
+[E] para interactuar
+ "
+horizontal_alignment = 1
+
+[node name="GlitchOverlay" type="ColorRect" parent="Control" unique_id=1651411662]
+material = SubResource("ShaderMaterial_8ln24")
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 646.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.23529412)
