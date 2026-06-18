@@ -11,25 +11,18 @@ float random(vec2 uv) {
 void fragment() {
 	vec2 uv = SCREEN_UV;
 	float t = TIME * time_speed;
+	vec4 base_color = texture(screen_tex, uv);
 
-	// Cortes horizontales aleatorios
-	float block = floor(uv.y * 40.0);
-	float line_glitch = random(vec2(block, floor(t * 8.0)));
-	float shift = (line_glitch - 0.5) * glitch_intensity * 0.08;
-	
-	if (line_glitch > 0.85) {
-		uv.x += shift * 3.0;
-	}
+	float slow_flicker = random(vec2(floor(t * 2.0), 1.0));
+	float fast_flicker = random(vec2(floor(t * 13.0), 2.0));
+	float pulse = mix(slow_flicker, fast_flicker, 0.45);
+	float brightness = mix(-0.45, 0.35, pulse) * glitch_intensity;
 
-	// Desplazamiento de canales RGB
-	float offset = glitch_intensity * 0.006;
-	vec4 col_r = texture(screen_tex, uv + vec2(offset, 0.0));
-	vec4 col_g = texture(screen_tex, uv);
-	vec4 col_b = texture(screen_tex, uv - vec2(offset, 0.0));
+	float vignette = distance(uv, vec2(0.5));
+	float edge_darkness = smoothstep(0.25, 0.85, vignette) * glitch_intensity * 0.18;
+	float uneven_light = random(floor(uv * 5.0) + floor(t * 4.0)) * 0.08 * glitch_intensity;
 
-	COLOR = vec4(col_r.r, col_g.g, col_b.b, 1.0);
-
-	// Ruido sutil
-	float noise = random(uv + t) * glitch_intensity * 0.1;
-	COLOR.rgb += noise;
+	COLOR = base_color;
+	COLOR.rgb += brightness + uneven_light;
+	COLOR.rgb -= edge_darkness;
 }

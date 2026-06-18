@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_wu84c"]
 [ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="3_8ln24"]
 [ext_resource type="Shader" uid="uid://6qh5qnrt4660" path="res://shaders/glitch.gdshader" id="4_wu84c"]
+[ext_resource type="Texture2D" uid="uid://c27rlqn1dikhr" path="res://assets/cover.png" id="5_cover"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8ln24"]
 shader = ExtResource("4_wu84c")
@@ -21,12 +22,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Cover" type="TextureRect" parent="Control" unique_id=778254314]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_cover")
+expand_mode = 1
+stretch_mode = 6
+
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=655999709]
-layout_mode = 0
-offset_top = -2.0
-offset_right = 1153.0
-offset_bottom = 644.0
-color = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.35)
 
 [node name="Game Title" type="Label" parent="Control" unique_id=640198212]
 layout_mode = 0
@@ -34,8 +48,8 @@ offset_left = 300.0
 offset_top = 285.0
 offset_right = 885.0
 offset_bottom = 330.0
-theme_override_colors/font_color = Color(0.46, 0.11055333, 0.064399995, 1)
-theme_override_colors/font_outline_color = Color(0.54509807, 0, 0, 1)
+theme_override_colors/font_color = Color(0.24313726, 0.25882354, 0.18039216, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_wu84c")
 theme_override_font_sizes/font_size = 45
@@ -61,7 +75,7 @@ offset_left = 493.0
 offset_top = 490.0
 offset_right = 665.0
 offset_bottom = 556.0
-theme_override_colors/font_color = Color(0.45882353, 0.10980392, 0.0627451, 1)
+theme_override_colors/font_color = Color(0.24313726, 0.25882354, 0.18039216, 1)
 theme_override_fonts/font = ExtResource("3_8ln24")
 text = "[Espacio] para saltar
 [E] para interactuar
@@ -70,8 +84,11 @@ horizontal_alignment = 1
 
 [node name="GlitchOverlay" type="ColorRect" parent="Control" unique_id=1651411662]
 material = SubResource("ShaderMaterial_8ln24")
-layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 646.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.23529412)
