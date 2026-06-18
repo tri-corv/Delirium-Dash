@@ -90,10 +90,10 @@ size = Vector2(53, 73)
 script = ExtResource("5_level")
 
 [node name="Background" type="Polygon2D" parent="." unique_id=1096657747]
-position = Vector2(301.00003, 87)
-scale = Vector2(1.4020644, 1)
+position = Vector2(643.01355, 223.02293)
+scale = Vector2(1.340017, 0.4343294)
 color = Color(0.08, 0.09, 0.11, 1)
-polygon = PackedVector2Array(-800, -500, 5508.592, -525, 5512.1206, -243.99997, 5510.0034, 200.00003, 5511.415, 317.00003, 5512.1206, 914, -800, 900)
+polygon = PackedVector2Array(-800, -500, 5508.592, -525, 5512.1206, -243.99997, 5510.0034, 200.00003, 5511.415, 317.00003, 5512.1206, 914, -800, 900, -799.99994, 202.21619)
 
 [node name="Terrain" type="TileMapLayer" parent="." unique_id=679485888]
 texture_filter = 1

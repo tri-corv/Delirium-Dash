@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://d3xlje1aiufs"]
+
+[ext_resource type="Texture2D" uid="uid://ddiu560nh2dhw" path="res://assets/walls_05.png" id="2_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://ceew6x2qlldlu" path="res://assets/floor_03.png" id="3_4nkto"]
+[ext_resource type="Texture2D" uid="uid://bdl552ouq8nlj" path="res://assets/Level 1/sign.png" id="4_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://c62krnwrb30sf" path="res://scenes/player.tscn" id="4_wa552"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
+size = Vector2(3362.8438, 935.82324)
+
+[node name="Level1" type="Node2D" unique_id=462765882]
+
+[node name="Player" parent="." unique_id=155201999 instance=ExtResource("4_wa552")]
+z_index = 1
+position = Vector2(300, 447)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=929911515]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+
+[node name="Background" type="Polygon2D" parent="." unique_id=119023805]
+position = Vector2(-151.42824, -159.59146)
+scale = Vector2(1.6363991, 2.2798796)
+color = Color(0.078431375, 0.09019608, 0.10980392, 1)
+polygon = PackedVector2Array(93, 70, 796.5242, 72.09538, 796.5242, 209.67691, 796.5242, 353.35382, 450.53568, 352.4831, 441.96664, 352.5248, 92.5405, 354.2256)
+
+[node name="Wall_01" type="Sprite2D" parent="Background" unique_id=1847029746]
+position = Vector2(445.18167, 159.03546)
+scale = Vector2(0.3949328, 0.19608966)
+texture = ExtResource("2_5xbjy")
+
+[node name="FloorCollision" type="StaticBody2D" parent="Background" unique_id=1113779058]
+
+[node name="Floor_01" type="Sprite2D" parent="Background/FloorCollision" unique_id=1652326426]
+position = Vector2(288.7598, 299.78534)
+rotation = -3.1415925
+scale = Vector2(0.270338, 0.13504276)
+skew = 0.5672318
+texture = ExtResource("3_4nkto")
+
+[node name="Floor_02" type="Sprite2D" parent="Background/FloorCollision" unique_id=98854137]
+position = Vector2(742.99994, 299.7849)
+rotation = -3.1415925
+scale = Vector2(0.270338, 0.13504276)
+skew = 0.5672318
+texture = ExtResource("3_4nkto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/FloorCollision" unique_id=609333677]
+position = Vector2(515.4705, 300.05594)
+rotation = -3.1415925
+scale = Vector2(0.270338, 0.13504277)
+skew = 0.567232
+shape = SubResource("RectangleShape2D_5xbjy")
+
+[node name="Decoration" type="Node2D" parent="." unique_id=1259808773]
+
+[node name="Sign_01" type="Sprite2D" parent="Decoration" unique_id=1883638046]
+position = Vector2(242, 131)
+scale = Vector2(1.5, 1.594)
+texture = ExtResource("4_fcfvj")
