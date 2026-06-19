@@ -1,7 +1,9 @@
 extends Area2D
 
-@export var closed_texture: Texture2D = preload("res://assets/sprites/door_closed.png")
-@export var open_texture: Texture2D = preload("res://assets/sprites/puerta.jpg")
+@export var closed_texture: Texture2D = preload("res://assets/Level 1/door_04.png")
+@export var open_texture: Texture2D = preload("res://assets/Level 1/door_opened.png")
+@export var closed_scale: Vector2 = Vector2.ONE
+@export var open_scale: Vector2 = Vector2.ONE
 @export var next_scene: String = ""
 
 @onready var sprite: Sprite2D = $Sprite2D
@@ -10,6 +12,7 @@ var _is_finishing := false
 
 func _ready() -> void:
 	sprite.texture = closed_texture
+	sprite.scale = closed_scale
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:
@@ -23,12 +26,12 @@ func _finish_level(player: Node2D) -> void:
 	player.freeze()
 
 	sprite.texture = open_texture
-	sprite.scale = Vector2.ONE
+	sprite.scale = open_scale
 	var tween := create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(player, "modulate:a", 0.0, 0.35)
 	tween.tween_property(player, "scale", player.scale * 0.75, 0.35)
-	tween.tween_property(sprite, "scale", Vector2(1.04, 1.0), 0.12)
+	tween.tween_property(sprite, "scale", open_scale * Vector2(1.04, 1.0), 0.12)
 
 	await tween.finished
 	player.queue_free()
@@ -36,8 +39,9 @@ func _finish_level(player: Node2D) -> void:
 	var close_tween := create_tween()
 	close_tween.tween_interval(0.12)
 	close_tween.tween_callback(func(): sprite.texture = closed_texture)
-	close_tween.tween_property(sprite, "scale", Vector2(0.92, 1.08), 0.08)
-	close_tween.tween_property(sprite, "scale", Vector2.ONE, 0.14)
+	close_tween.tween_callback(func(): sprite.scale = closed_scale)
+	close_tween.tween_property(sprite, "scale", closed_scale * Vector2(0.92, 1.08), 0.08)
+	close_tween.tween_property(sprite, "scale", closed_scale, 0.14)
 	await close_tween.finished
 
 	if not next_scene.is_empty():

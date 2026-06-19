@@ -7,7 +7,7 @@ signal sanity_depleted
 @export var max_sanity: float = 100.0
 
 const MOVE_SPEED: float = 280.0
-const JUMP_FORCE: float = -520.0
+const JUMP_FORCE: float = -700.0
 const GRAVITY: float = 1200.0
 
 var is_dead: bool = false

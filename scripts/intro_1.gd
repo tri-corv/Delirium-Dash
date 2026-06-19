@@ -10,7 +10,7 @@ vacias no lo estan."
 > Encuentra la Note 1
 > Escapa del pabellón
 > Cuida tu cordura"
-@export_file("*.tscn") var siguiente_escena: String = "res://scenes/level.tscn"
+@export_file("*.tscn") var siguiente_escena: String = "res://scenes/level_1.tscn"
 
 @onready var label_numero: Label = $Control/Level
 @onready var label_nombre: Label = $Control/Title
