@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bree38ycuuty0"
-path="res://.godot/imported/light_off_03.png-ee0d69a5da8bc847c742cec443cd8736.ctex"
+uid="uid://xl7pgpqx7vwa"
+path="res://.godot/imported/blood_02.png-187dc9233686d17d393d7e1e554f4cdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Level 1/light_off_03.png"
-dest_files=["res://.godot/imported/light_off_03.png-ee0d69a5da8bc847c742cec443cd8736.ctex"]
+source_file="res://assets/Level 1/blood_02.png"
+dest_files=["res://.godot/imported/blood_02.png-187dc9233686d17d393d7e1e554f4cdb.ctex"]
 
 [params]
 

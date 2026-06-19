@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bree38ycuuty0"
-path="res://.godot/imported/light_off_03.png-ee0d69a5da8bc847c742cec443cd8736.ctex"
+uid="uid://6cmj03mhevr5"
+path="res://.godot/imported/bloody_hands.png-822d562dfdb84dfbc5e185807b389a15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Level 1/light_off_03.png"
-dest_files=["res://.godot/imported/light_off_03.png-ee0d69a5da8bc847c742cec443cd8736.ctex"]
+source_file="res://assets/Level 1/bloody_hands.png"
+dest_files=["res://.godot/imported/bloody_hands.png-822d562dfdb84dfbc5e185807b389a15.ctex"]
 
 [params]
 

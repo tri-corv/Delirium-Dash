@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db5vktrfva8pk"
-path="res://.godot/imported/blood_02.png-22eb2925e301e6fc8e0ac340b01ee327.ctex"
+uid="uid://b001cluvgggdt"
+path="res://.godot/imported/foot_prints.png-3cacb70cef0419f09bef4fbaac04de32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/blood_02.png"
-dest_files=["res://.godot/imported/blood_02.png-22eb2925e301e6fc8e0ac340b01ee327.ctex"]
+source_file="res://assets/Level 1/foot_prints.png"
+dest_files=["res://.godot/imported/foot_prints.png-3cacb70cef0419f09bef4fbaac04de32.ctex"]
 
 [params]
 
