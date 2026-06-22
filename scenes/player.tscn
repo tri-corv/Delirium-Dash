@@ -13,7 +13,7 @@ script = ExtResource("1_3vyb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2020220986]
 texture_filter = 1
-position = Vector2(-63.500008, -0.75)
+position = Vector2(-44.25, -33.25)
 scale = Vector2(0.16899998, 0.16899998)
 texture = ExtResource("2_xu26u")
 
@@ -23,7 +23,7 @@ color = Color(0.2, 0.85, 0.58, 1)
 polygon = PackedVector2Array(-14, -14, 14, -14, 14, 14, -14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404403226]
-position = Vector2(-65.25, -1.7499971)
+position = Vector2(-46.000008, -32.249996)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_3vyb7")
 

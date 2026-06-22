@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djq5kilxy8t5r"
-path="res://.godot/imported/drugs_02.png-124dc6dd4f95a88120b9f54a5e08190c.ctex"
+uid="uid://t4am1a0a8c5l"
+path="res://.godot/imported/door_open.png-c4e87a72620978bb79fec0850ab38e13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Level 1/drugs_02.png"
-dest_files=["res://.godot/imported/drugs_02.png-124dc6dd4f95a88120b9f54a5e08190c.ctex"]
+source_file="res://assets/sprites/door_open.png"
+dest_files=["res://.godot/imported/door_open.png-c4e87a72620978bb79fec0850ab38e13.ctex"]
 
 [params]
 
