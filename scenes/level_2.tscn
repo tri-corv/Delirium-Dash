@@ -1,7 +1,535 @@
 [gd_scene format=3 uid="uid://bqs1j02k5j11s"]
 
 [ext_resource type="PackedScene" uid="uid://c62krnwrb30sf" path="res://scenes/player.tscn" id="1_3bmlt"]
+[ext_resource type="Texture2D" uid="uid://dhh017tnsfp3x" path="res://assets/Level 2/walls_02.png" id="2_guvtl"]
+[ext_resource type="Texture2D" uid="uid://c502kx02e8gv2" path="res://assets/Level 2/floors_02.png" id="3_igmy8"]
+[ext_resource type="Texture2D" uid="uid://noycytvnij0d" path="res://assets/Level 1/ceiling.png" id="4_wo48x"]
+[ext_resource type="Texture2D" uid="uid://c4dfhug5sookm" path="res://assets/Level 2/board_02.png" id="5_wdtqu"]
+[ext_resource type="Texture2D" uid="uid://ls3cusw8x5sb" path="res://assets/Level 2/desk_02.png" id="6_7qsfm"]
+[ext_resource type="Texture2D" uid="uid://nobcg06pti2y" path="res://assets/Level 2/shelf_04.png" id="7_bv48q"]
+[ext_resource type="Texture2D" uid="uid://b7fnm3wn6cjih" path="res://assets/Level 2/shelf_02.png" id="8_k22d5"]
+[ext_resource type="Texture2D" uid="uid://ba70wj6pgnkct" path="res://assets/Level 2/shelf_03.png" id="9_k6a82"]
+[ext_resource type="Texture2D" uid="uid://eppk1kwcyuwk" path="res://assets/Level 2/shelf_05.png" id="10_1sb0y"]
+[ext_resource type="Texture2D" uid="uid://dnmyj1yqu224e" path="res://assets/Level 2/poster.png" id="11_vhnap"]
+[ext_resource type="Texture2D" uid="uid://ukpmw0ibe1bh" path="res://assets/Level 2/paper_clip.png" id="12_vwfin"]
+[ext_resource type="Texture2D" uid="uid://d201yogt21bwl" path="res://assets/Level 2/sink.png" id="13_63d2t"]
+[ext_resource type="Texture2D" uid="uid://bwfii02cmbvem" path="res://assets/Level 2/door_06.png" id="14_va6c3"]
+[ext_resource type="Texture2D" uid="uid://bsrw6xqxyicau" path="res://assets/Level 2/window_lab.png" id="15_pc3at"]
+[ext_resource type="Texture2D" uid="uid://b6tn3pgltgyfi" path="res://assets/Level 2/table_01.png" id="16_igmy8"]
+[ext_resource type="Texture2D" uid="uid://coc240x3mi8kv" path="res://assets/Level 2/table_02.png" id="17_vhnap"]
+[ext_resource type="Texture2D" uid="uid://ccb77lm2qnyvd" path="res://assets/sprites/file_03.png" id="17_wdtqu"]
+[ext_resource type="Texture2D" uid="uid://d1rnvbek0xidi" path="res://assets/Level 2/notebook.png" id="19_va6c3"]
+[ext_resource type="Script" uid="uid://cpyhyikm484b2" path="res://scripts/note_interaction.gd" id="19_vwfin"]
+[ext_resource type="Texture2D" uid="uid://ubmqivew2tq4" path="res://assets/Level 2/confidential.png" id="20_63d2t"]
+[ext_resource type="Texture2D" uid="uid://ckl3v61tc0by1" path="res://assets/Level 1/bed_table.png" id="20_pc3at"]
+[ext_resource type="Texture2D" uid="uid://caf1nev3ipidl" path="res://assets/Level 2/key_02.png" id="21_bgibu"]
+[ext_resource type="Texture2D" uid="uid://dwhct5ctp4pxj" path="res://assets/sprites/note_01.png" id="21_va6c3"]
+[ext_resource type="AudioStream" uid="uid://byppveua5f1x8" path="res://assets/Storm.mp3" id="22_pc3at"]
+[ext_resource type="AudioStream" uid="uid://dimk4rj8pbc3h" path="res://assets/Thunders.mp3" id="23_bgibu"]
+[ext_resource type="Texture2D" uid="uid://c52u5iptcr1n0" path="res://assets/Level 2/Note_02.png" id="24_bgibu"]
+[ext_resource type="Texture2D" uid="uid://b8rvdjq3kyya7" path="res://assets/Level 2/key.png" id="26_73m23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0kc7"]
+size = Vector2(6395.6255, 239.72108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgibu"]
+size = Vector2(1747.3137, 40.896263)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45kkt"]
+size = Vector2(40.97002, 330.81754)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73m23"]
+size = Vector2(58, 67)
 
 [node name="Level2" type="Node2D" unique_id=1200918494]
+position = Vector2(3, 97)
 
 [node name="Player" parent="." unique_id=155201999 instance=ExtResource("1_3bmlt")]
+z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=403330316]
+position = Vector2(0, -35)
+zoom = Vector2(1.16, 1.16)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+
+[node name="Background" type="Polygon2D" parent="." unique_id=1854709008]
+position = Vector2(-95.245735, -136.19452)
+scale = Vector2(1.3963742, 1.9456372)
+color = Color(0.078431375, 0.09019608, 0.10980392, 0)
+polygon = PackedVector2Array(93, 70, 796.5242, 72.09538, 796.5242, 209.67691, 796.5242, 353.35382, 667.2855, 353.02866, 450.53568, 352.4831, 441.96664, 352.5248, 88.25122, 354.2256)
+
+[node name="Wall_01" type="Sprite2D" parent="Background" unique_id=135332609]
+position = Vector2(599.86, 106.69325)
+scale = Vector2(0.37552145, 0.26234984)
+texture = ExtResource("2_guvtl")
+
+[node name="Wall_02" type="Sprite2D" parent="Background" unique_id=1159963766]
+position = Vector2(-185.88991, 101.56764)
+scale = Vector2(0.41886297, 0.29055378)
+texture = ExtResource("2_guvtl")
+
+[node name="Wall_03" type="Sprite2D" parent="Background" unique_id=276265773]
+position = Vector2(1382.6708, 109.84928)
+scale = Vector2(0.41785324, 0.27023005)
+texture = ExtResource("2_guvtl")
+
+[node name="Wall_04" type="Sprite2D" parent="Background" unique_id=1304282055]
+position = Vector2(2200.8752, 109.57568)
+scale = Vector2(0.41388065, 0.2640728)
+texture = ExtResource("2_guvtl")
+
+[node name="Wall_05" type="Sprite2D" parent="Background" unique_id=1595645703]
+position = Vector2(3020.1472, 110.603615)
+scale = Vector2(0.41604054, 0.2640728)
+texture = ExtResource("2_guvtl")
+
+[node name="FloorCollision" type="StaticBody2D" parent="Background" unique_id=1261190364]
+
+[node name="Floor_01" type="Sprite2D" parent="Background/FloorCollision" unique_id=573477546]
+position = Vector2(403.81665, 282.05634)
+rotation = -3.1415925
+scale = Vector2(0.270338, 0.21407995)
+skew = 0.5672318
+texture = ExtResource("3_igmy8")
+
+[node name="Floor_19" type="Sprite2D" parent="Background/FloorCollision" unique_id=2136938931]
+position = Vector2(-251.22708, 283.4716)
+rotation = -3.1415925
+scale = Vector2(0.3895249, 0.20984699)
+skew = 0.5672318
+texture = ExtResource("3_igmy8")
+
+[node name="Floor_02" type="Sprite2D" parent="Background/FloorCollision" unique_id=486647809]
+position = Vector2(941.8417, 282.76407)
+rotation = -3.1415925
+scale = Vector2(0.274234, 0.21464697)
+skew = 0.5672318
+texture = ExtResource("3_igmy8")
+
+[node name="Floor_03" type="Sprite2D" parent="Background/FloorCollision" unique_id=792673713]
+position = Vector2(1474.5729, 284.17963)
+rotation = -3.1415925
+scale = Vector2(0.27278927, 0.21185951)
+skew = 0.5672318
+texture = ExtResource("3_igmy8")
+
+[node name="Floor_04" type="Sprite2D" parent="Background/FloorCollision" unique_id=258668890]
+position = Vector2(2017.006, 284.18)
+rotation = -3.1415925
+scale = Vector2(0.27969012, 0.21185951)
+skew = 0.5672318
+texture = ExtResource("3_igmy8")
+
+[node name="Floor_05" type="Sprite2D" parent="Background/FloorCollision" unique_id=1742595864]
+position = Vector2(2568.972, 284.18)
+rotation = -3.1415925
+scale = Vector2(0.27969012, 0.21185951)
+skew = 0.5672318
+texture = ExtResource("3_igmy8")
+
+[node name="Floor_06" type="Sprite2D" parent="Background/FloorCollision" unique_id=1086243019]
+position = Vector2(3122.865, 284.18)
+rotation = -3.1415925
+scale = Vector2(0.280816, 0.21185951)
+skew = 0.5672318
+texture = ExtResource("3_igmy8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/FloorCollision" unique_id=714668512]
+position = Vector2(837.2008, 334.98294)
+rotation = -3.1415925
+scale = Vector2(0.270338, 0.13504276)
+skew = 0.567232
+shape = SubResource("RectangleShape2D_y0kc7")
+
+[node name="CeilingCollision" type="StaticBody2D" parent="Background" unique_id=1283778318]
+
+[node name="Ceiling_01" type="Sprite2D" parent="Background/CeilingCollision" unique_id=335658678]
+position = Vector2(-345.863, -44.62219)
+scale = Vector2(0.33799392, 0.1)
+texture = ExtResource("4_wo48x")
+
+[node name="Ceiling_02" type="Sprite2D" parent="Background/CeilingCollision" unique_id=1326250096]
+position = Vector2(164.97029, -44.622)
+scale = Vector2(0.33758822, 0.1)
+texture = ExtResource("4_wo48x")
+
+[node name="Ceiling_03" type="Sprite2D" parent="Background/CeilingCollision" unique_id=1710859335]
+position = Vector2(674.06116, -44.622)
+scale = Vector2(0.3388137, 0.1)
+texture = ExtResource("4_wo48x")
+
+[node name="Ceiling_04" type="Sprite2D" parent="Background/CeilingCollision" unique_id=1005408350]
+position = Vector2(1358.3431, -44.622)
+scale = Vector2(0.5607425, 0.1)
+texture = ExtResource("4_wo48x")
+
+[node name="Ceiling_05" type="Sprite2D" parent="Background/CeilingCollision" unique_id=2092388288]
+position = Vector2(2220.2114, -44.615448)
+scale = Vector2(0.5607425, 0.1)
+texture = ExtResource("4_wo48x")
+
+[node name="Ceiling_06" type="Sprite2D" parent="Background/CeilingCollision" unique_id=1184377896]
+position = Vector2(3040.9082, -45.643394)
+scale = Vector2(0.512861, 0.1)
+texture = ExtResource("4_wo48x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/CeilingCollision" unique_id=1674644814]
+position = Vector2(879.5779, -20.39312)
+shape = SubResource("RectangleShape2D_bgibu")
+
+[node name="WallsCollision" type="StaticBody2D" parent="Background" unique_id=1910215834]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/WallsCollision" unique_id=1492482921]
+position = Vector2(10.485012, 155.40877)
+shape = SubResource("RectangleShape2D_45kkt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/WallsCollision" unique_id=1301328814]
+position = Vector2(1735.3842, 155.83302)
+shape = SubResource("RectangleShape2D_45kkt")
+
+[node name="Decoration" type="Node2D" parent="." unique_id=882941253]
+
+[node name="Board" type="Sprite2D" parent="Decoration" unique_id=1755918766]
+position = Vector2(1023, 3)
+scale = Vector2(2.9978244, 2.4417808)
+texture = ExtResource("5_wdtqu")
+
+[node name="Desk" type="Sprite2D" parent="Decoration" unique_id=690111909]
+position = Vector2(1110, 198.8125)
+scale = Vector2(2.8911917, 3.391667)
+texture = ExtResource("6_7qsfm")
+
+[node name="Shelf_01" type="Sprite2D" parent="Decoration" unique_id=998471216]
+position = Vector2(706.00006, 13.000004)
+scale = Vector2(2.4193575, 2.6714287)
+texture = ExtResource("7_bv48q")
+
+[node name="Shelf_02" type="Sprite2D" parent="Decoration" unique_id=559817448]
+position = Vector2(122.00002, 113.00001)
+scale = Vector2(3.309791, 3.0349753)
+texture = ExtResource("8_k22d5")
+
+[node name="Shelf_03" type="Sprite2D" parent="Decoration" unique_id=1811677800]
+position = Vector2(380.00003, 158)
+scale = Vector2(3.309791, 3.0349753)
+texture = ExtResource("9_k6a82")
+
+[node name="Shelf_04" type="Sprite2D" parent="Decoration" unique_id=1660699910]
+position = Vector2(2188.3901, 210.61205)
+scale = Vector2(3.1655405, 2.6746304)
+texture = ExtResource("10_1sb0y")
+
+[node name="Poster" type="Sprite2D" parent="Decoration" unique_id=1067101175]
+position = Vector2(1623.9999, -4.999996)
+scale = Vector2(2.7099977, 2.421875)
+texture = ExtResource("11_vhnap")
+
+[node name="PaperClip" type="Sprite2D" parent="Decoration" unique_id=915957544]
+position = Vector2(667, 302)
+rotation = -0.34906584
+scale = Vector2(2.6111112, 2.5487804)
+texture = ExtResource("12_vwfin")
+
+[node name="Sink" type="Sprite2D" parent="Decoration" unique_id=1618581193]
+position = Vector2(1718.9999, 202.99998)
+scale = Vector2(3.132978, 3.3346152)
+texture = ExtResource("13_63d2t")
+
+[node name="Door" type="Sprite2D" parent="Decoration" unique_id=1346655745]
+position = Vector2(4465, 85)
+scale = Vector2(4.2636366, 3.7117648)
+texture = ExtResource("14_va6c3")
+
+[node name="Window" type="Sprite2D" parent="Decoration" unique_id=1857898212]
+position = Vector2(2095, -8)
+scale = Vector2(2.8661983, 2.521605)
+texture = ExtResource("15_pc3at")
+
+[node name="Table_01" type="Sprite2D" parent="Decoration" unique_id=1860671792]
+position = Vector2(2769, 344.00003)
+scale = Vector2(3.368103, 2.4087298)
+texture = ExtResource("16_igmy8")
+
+[node name="Table_02" type="Sprite2D" parent="Decoration" unique_id=1686315652]
+position = Vector2(3807, 347)
+scale = Vector2(3.368103, 2.4087298)
+texture = ExtResource("17_vhnap")
+
+[node name="Files" type="Sprite2D" parent="Decoration" unique_id=665731174]
+position = Vector2(2943.9998, 361.00012)
+rotation = 0.7487463
+scale = Vector2(0.33403492, 0.3172184)
+texture = ExtResource("17_wdtqu")
+
+[node name="Notebook" type="Sprite2D" parent="Decoration" unique_id=952764640]
+position = Vector2(3685, 351)
+rotation = 0.54803336
+scale = Vector2(0.22222203, 0.20917225)
+texture = ExtResource("19_va6c3")
+
+[node name="Bed_Table" type="Sprite2D" parent="Decoration" unique_id=656814897]
+position = Vector2(4302.625, 231.74998)
+scale = Vector2(1.8989353, 1.5367646)
+texture = ExtResource("20_pc3at")
+
+[node name="Key" type="Sprite2D" parent="Decoration" unique_id=1596611946]
+position = Vector2(4309, 200.00002)
+scale = Vector2(0.11469534, 0.12192394)
+texture = ExtResource("21_bgibu")
+
+[node name="NoteInteraction" type="Area2D" parent="." unique_id=146162612]
+z_index = 2
+position = Vector2(4000, 300)
+script = ExtResource("19_vwfin")
+note_texture = ExtResource("20_63d2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoteInteraction" unique_id=814916468]
+position = Vector2(-1058, 54.5)
+shape = SubResource("RectangleShape2D_73m23")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="NoteInteraction" unique_id=1587365587]
+layer = 20
+
+[node name="Prompt" type="Label" parent="NoteInteraction/CanvasLayer" unique_id=1301327880]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -96.0
+offset_right = -48.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.95, 0.9, 0.72, 1)
+theme_override_font_sizes/font_size = 18
+text = "Presiona E para leer"
+horizontal_alignment = 1
+
+[node name="Overlay" type="Control" parent="NoteInteraction/CanvasLayer" unique_id=1410634786]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="NoteInteraction/CanvasLayer/Overlay" unique_id=1764153065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78)
+
+[node name="NoteImage" type="TextureRect" parent="NoteInteraction/CanvasLayer/Overlay" unique_id=1833372255]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 45.0
+offset_right = -80.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_va6c3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ClosePrompt" type="Label" parent="NoteInteraction/CanvasLayer/Overlay" unique_id=57152170]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -52.0
+offset_right = -48.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.9, 0.86, 0.72, 1)
+theme_override_font_sizes/font_size = 15
+text = "Presiona Enter para cerrar"
+horizontal_alignment = 1
+
+[node name="NoteInteraction2" type="Area2D" parent="." unique_id=831990409]
+z_index = 2
+position = Vector2(4000, 300)
+script = ExtResource("19_vwfin")
+note_texture = ExtResource("24_bgibu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoteInteraction2" unique_id=1786019715]
+position = Vector2(-316, 48)
+shape = SubResource("RectangleShape2D_73m23")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="NoteInteraction2" unique_id=1612095023]
+layer = 20
+
+[node name="Prompt" type="Label" parent="NoteInteraction2/CanvasLayer" unique_id=264339997]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -96.0
+offset_right = -48.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.95, 0.9, 0.72, 1)
+theme_override_font_sizes/font_size = 18
+text = "Presiona E para leer"
+horizontal_alignment = 1
+
+[node name="Overlay" type="Control" parent="NoteInteraction2/CanvasLayer" unique_id=1866095752]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="NoteInteraction2/CanvasLayer/Overlay" unique_id=881733099]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78)
+
+[node name="NoteImage" type="TextureRect" parent="NoteInteraction2/CanvasLayer/Overlay" unique_id=1174727947]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 45.0
+offset_right = -80.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_va6c3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ClosePrompt" type="Label" parent="NoteInteraction2/CanvasLayer/Overlay" unique_id=565832139]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -52.0
+offset_right = -48.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.9, 0.86, 0.72, 1)
+theme_override_font_sizes/font_size = 15
+text = "Presiona Enter para cerrar"
+horizontal_alignment = 1
+
+[node name="ObjectInteraction3" type="Area2D" parent="." unique_id=646901345]
+z_index = 2
+position = Vector2(4622, 153)
+script = ExtResource("19_vwfin")
+note_texture = ExtResource("26_73m23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectInteraction3" unique_id=861115479]
+position = Vector2(-316, 48)
+shape = SubResource("RectangleShape2D_73m23")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ObjectInteraction3" unique_id=1795035577]
+layer = 20
+
+[node name="Prompt" type="Label" parent="ObjectInteraction3/CanvasLayer" unique_id=1783414279]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -96.0
+offset_right = -48.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.95, 0.9, 0.72, 1)
+theme_override_font_sizes/font_size = 18
+text = "Presiona E para leer"
+horizontal_alignment = 1
+
+[node name="Overlay" type="Control" parent="ObjectInteraction3/CanvasLayer" unique_id=198126193]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="ObjectInteraction3/CanvasLayer/Overlay" unique_id=695646327]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78)
+
+[node name="NoteImage" type="TextureRect" parent="ObjectInteraction3/CanvasLayer/Overlay" unique_id=1214032464]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 45.0
+offset_right = -80.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_va6c3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ClosePrompt" type="Label" parent="ObjectInteraction3/CanvasLayer/Overlay" unique_id=2090480029]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -52.0
+offset_right = -48.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.9, 0.86, 0.72, 1)
+theme_override_font_sizes/font_size = 15
+text = "Presiona Enter para cerrar"
+horizontal_alignment = 1
+
+[node name="Storm" type="AudioStreamPlayer2D" parent="." unique_id=785136068]
+stream = ExtResource("22_pc3at")
+volume_db = 7.373
+autoplay = true
+max_distance = 100000.0
+attenuation = 0.0
+parameters/looping = true
+
+[node name="Thunders" type="AudioStreamPlayer2D" parent="." unique_id=906666554]
+stream = ExtResource("23_bgibu")
+volume_db = 10.0
+autoplay = true
+max_distance = 100000.0
+attenuation = 0.0
+parameters/looping = true

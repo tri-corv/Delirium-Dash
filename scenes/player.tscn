@@ -7,7 +7,7 @@
 size = Vector2(25.600006, 65.899994)
 
 [node name="Player" type="CharacterBody2D" unique_id=155201999 groups=["player"]]
-position = Vector2(200, 350)
+position = Vector2(581, 361)
 scale = Vector2(4, 4)
 script = ExtResource("1_3vyb7")
 
