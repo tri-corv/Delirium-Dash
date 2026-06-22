@@ -21,12 +21,12 @@
 [ext_resource type="Texture2D" uid="uid://dc2l8b035cl3r" path="res://assets/Level 1/papers_02.png" id="18_awarj"]
 [ext_resource type="Texture2D" uid="uid://du6w0ml02n81g" path="res://assets/Level 1/papers_03.png" id="19_uuj1x"]
 [ext_resource type="Texture2D" uid="uid://17gb3j8d0xa2" path="res://assets/Level 1/pipes.png" id="21_3x5jj"]
-[ext_resource type="Texture2D" uid="uid://bkr3kdquwqo45" path="res://assets/sprites/screen.png" id="21_yfehg"]
+[ext_resource type="Texture2D" uid="uid://bkr3kdquwqo45" path="res://assets/Level 1/screen.png" id="21_yfehg"]
 [ext_resource type="Texture2D" uid="uid://ncs287k0s4jr" path="res://assets/Level 1/extinguisher.png" id="22_75ls7"]
 [ext_resource type="Texture2D" uid="uid://de2akj757d6oe" path="res://assets/Level 1/cart_02.png" id="23_gwsl1"]
 [ext_resource type="Texture2D" uid="uid://bik0wo6ieiawn" path="res://assets/Level 1/drugs_02.png" id="24_lkded"]
 [ext_resource type="Texture2D" uid="uid://djq5kilxy8t5r" path="res://assets/Level 1/drugs_03.png" id="25_ensge"]
-[ext_resource type="Texture2D" uid="uid://hm7ei2qs1co5" path="res://assets/sprites/books.png" id="26_iwav6"]
+[ext_resource type="Texture2D" uid="uid://hm7ei2qs1co5" path="res://assets/Level 1/books.png" id="26_iwav6"]
 [ext_resource type="Texture2D" uid="uid://ckl3v61tc0by1" path="res://assets/Level 1/bed_table.png" id="26_qb2q0"]
 [ext_resource type="Texture2D" uid="uid://bgcijemshapag" path="res://assets/Level 1/syringe_03.png" id="27_x3eym"]
 [ext_resource type="Texture2D" uid="uid://ccg8wjuuoeghm" path="res://assets/Level 1/candles_02.png" id="28_ffvxj"]
@@ -38,7 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://cngpv58u8ihvd" path="res://assets/Level 1/shelf.png" id="35_q0ron"]
 [ext_resource type="Texture2D" uid="uid://dm77ihmasnp5a" path="res://assets/Level 1/chair_02.png" id="36_q0ron"]
 [ext_resource type="Texture2D" uid="uid://cj5c0hxt61gbo" path="res://assets/Level 1/gurney_02.png" id="36_tdlki"]
-[ext_resource type="Texture2D" uid="uid://bm6myu5xrg1u7" path="res://assets/sprites/file_01.png" id="37_uuj1x"]
+[ext_resource type="Texture2D" uid="uid://b5c8d2oa3jnid" path="res://assets/Level 1/news.png" id="37_lvvyj"]
 [ext_resource type="Script" uid="uid://jhebo1aibekg" path="res://scripts/door.gd" id="38_rscm6"]
 [ext_resource type="Texture2D" uid="uid://cvi1hf61baeox" path="res://assets/Level 1/bloody_hand_01.png" id="38_x3eym"]
 [ext_resource type="Texture2D" uid="uid://b001cluvgggdt" path="res://assets/Level 1/foot_prints.png" id="39_ffvxj"]
@@ -56,9 +56,15 @@
 [ext_resource type="Texture2D" uid="uid://xsbe08ck5gdg" path="res://assets/Level 1/light_off_04.png" id="46_y0ove"]
 [ext_resource type="Script" uid="uid://cpyhyikm484b2" path="res://scripts/note_interaction.gd" id="48_3x5jj"]
 [ext_resource type="Texture2D" uid="uid://dwhct5ctp4pxj" path="res://assets/sprites/note_01.png" id="49_75ls7"]
+[ext_resource type="Script" uid="uid://csn0lbgke7y43" path="res://scripts/sanity_hud.gd" id="57_48b18"]
+[ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="58_88rua"]
+[ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="59_4ila6"]
+[ext_resource type="AudioStream" uid="uid://dw5wyuky688hb" path="res://assets/Paranoid Truth.mp3" id="60_88rua"]
+[ext_resource type="AudioStream" uid="uid://byppveua5f1x8" path="res://assets/Storm.mp3" id="61_4ila6"]
+[ext_resource type="AudioStream" uid="uid://dimk4rj8pbc3h" path="res://assets/Thunders.mp3" id="62_lvvyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
-size = Vector2(30910.945, 119.71213)
+size = Vector2(32161.895, 109.01695)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa552"]
 size = Vector2(8620.749, 76.967064)
@@ -77,7 +83,7 @@ height = 150
 fill = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8pws"]
-size = Vector2(90.3916, 131.5394)
+size = Vector2(17.05687, 94.720604)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwsl1"]
 size = Vector2(110, 192)
@@ -96,10 +102,10 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 
 [node name="Background" type="Polygon2D" parent="." unique_id=119023805]
-position = Vector2(-151.42824, -161.56169)
-scale = Vector2(1.6363991, 2.3080256)
+position = Vector2(-112.68807, -150.23265)
+scale = Vector2(1.5940183, 2.146182)
 color = Color(0.078431375, 0.09019608, 0.10980392, 0)
-polygon = PackedVector2Array(93, 70, 796.5242, 72.09538, 796.5242, 209.67691, 796.5242, 353.35382, 667.2855, 353.02866, 450.53568, 352.4831, 441.96664, 352.5248, 92.5405, 354.2256)
+polygon = PackedVector2Array(93, 70, 796.5242, 72.09538, 796.5242, 209.67691, 796.5242, 353.35382, 667.2855, 353.02866, 450.53568, 352.4831, 441.96664, 352.5248, 88.25122, 354.2256)
 
 [node name="Wall_01" type="Sprite2D" parent="Background" unique_id=1847029746]
 position = Vector2(445.18167, 159.03546)
@@ -237,9 +243,9 @@ skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_09" type="Sprite2D" parent="Background/FloorCollision" unique_id=565073090]
-position = Vector2(3925.954, 299.785)
+position = Vector2(3924.179, 299.785)
 rotation = -3.1415925
-scale = Vector2(0.270338, 0.13504276)
+scale = Vector2(0.272445, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
@@ -251,9 +257,9 @@ skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_11" type="Sprite2D" parent="Background/FloorCollision" unique_id=2131172767]
-position = Vector2(4836.49, 299.785)
+position = Vector2(4835.3066, 299.785)
 rotation = -3.1415925
-scale = Vector2(0.270338, 0.13504276)
+scale = Vector2(0.27174276, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
@@ -314,10 +320,10 @@ skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/FloorCollision" unique_id=609333677]
-position = Vector2(4204.3403, 346.31168)
+position = Vector2(4373.042, 346.92078)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
-skew = 0.567232
+skew = 0.56723225
 shape = SubResource("RectangleShape2D_5xbjy")
 
 [node name="CeilingCollision" type="StaticBody2D" parent="Background" unique_id=1054082689]
@@ -449,17 +455,17 @@ scale = Vector2(3.0807064, 2.7687497)
 texture = ExtResource("6_q0ron")
 
 [node name="Door_01" type="Sprite2D" parent="Decoration" unique_id=577442617]
-position = Vector2(2467.9858, 238)
+position = Vector2(2477.986, 210)
 scale = Vector2(1.1260163, 1.2330827)
 texture = ExtResource("8_v8pws")
 
 [node name="Door_02" type="Sprite2D" parent="Decoration" unique_id=1213936829]
-position = Vector2(7000.9863, 256)
+position = Vector2(6994.986, 231)
 scale = Vector2(3.122559, 3.2166667)
 texture = ExtResource("9_rscm6")
 
 [node name="Door_03" type="Sprite2D" parent="Decoration" unique_id=189841190]
-position = Vector2(3802.9854, 250.00003)
+position = Vector2(3802.9858, 225)
 scale = Vector2(3.2407413, 3.3444445)
 texture = ExtResource("10_wom8k")
 
@@ -469,17 +475,17 @@ scale = Vector2(1.1299558, 0.77181816)
 texture = ExtResource("11_wa552")
 
 [node name="Desk" type="Sprite2D" parent="Decoration" unique_id=2139539735]
-position = Vector2(1156.9861, 409)
+position = Vector2(1158.9861, 371)
 scale = Vector2(3.52, 2.4358976)
 texture = ExtResource("12_v0i6o")
 
 [node name="Plant" type="Sprite2D" parent="Decoration" unique_id=342817760]
-position = Vector2(2294.986, 336)
+position = Vector2(2298.986, 304)
 scale = Vector2(2.5, 2.2974684)
 texture = ExtResource("13_bamb7")
 
 [node name="Weelchair" type="Sprite2D" parent="Decoration" unique_id=1190487981]
-position = Vector2(2716.986, 372)
+position = Vector2(2716.9858, 339)
 scale = Vector2(2.5422535, 2.348485)
 texture = ExtResource("14_8jqp6")
 
@@ -489,7 +495,7 @@ scale = Vector2(2.6818204, 2.1742425)
 texture = ExtResource("15_jscgt")
 
 [node name="Seats" type="Sprite2D" parent="Decoration" unique_id=893530188]
-position = Vector2(5549.9863, 386)
+position = Vector2(5557.9863, 354)
 scale = Vector2(4.29798, 3.1909091)
 texture = ExtResource("16_0bysi")
 
@@ -524,12 +530,12 @@ scale = Vector2(1.2361112, 1.2361112)
 texture = ExtResource("18_awarj")
 
 [node name="Pipes_01" type="Sprite2D" parent="Decoration" unique_id=889040422]
-position = Vector2(7174.798, 123.87502)
-scale = Vector2(3.094303, 2.7073867)
+position = Vector2(7177.7983, 114.375)
+scale = Vector2(3.199575, 2.4914773)
 texture = ExtResource("21_3x5jj")
 
 [node name="Extinguisher" type="Sprite2D" parent="Decoration" unique_id=77367977]
-position = Vector2(6880.986, 365)
+position = Vector2(6891.9863, 335)
 scale = Vector2(1.9583334, 2.0925925)
 texture = ExtResource("22_75ls7")
 
@@ -620,7 +626,7 @@ scale = Vector2(3.1428647, 2.483333)
 texture = ExtResource("31_88rua")
 
 [node name="Vent" type="Sprite2D" parent="Decoration" unique_id=1394124462]
-position = Vector2(3798.9863, 56)
+position = Vector2(3802.9858, 43)
 scale = Vector2(2.0531914, 1.9)
 texture = ExtResource("32_4ila6")
 
@@ -635,7 +641,7 @@ scale = Vector2(0.16933943, 0.2105392)
 texture = ExtResource("26_iwav6")
 
 [node name="Shelf" type="Sprite2D" parent="Decoration" unique_id=1101677665]
-position = Vector2(11959.986, 243)
+position = Vector2(11955.986, 228)
 texture = ExtResource("35_q0ron")
 
 [node name="Screen" type="Sprite2D" parent="Decoration" unique_id=1063989747]
@@ -644,11 +650,11 @@ scale = Vector2(0.7605665, 0.747515)
 texture = ExtResource("21_yfehg")
 
 [node name="Note" type="Sprite2D" parent="Decoration" unique_id=997487578]
-position = Vector2(11975.986, 267.00006)
-rotation = 1.2967796
-scale = Vector2(0.20930994, 0.23193356)
-skew = 0.21118484
-texture = ExtResource("37_uuj1x")
+position = Vector2(11963.724, 247)
+rotation = 0.44854963
+scale = Vector2(0.14081807, 0.1914955)
+skew = 0.34732053
+texture = ExtResource("37_lvvyj")
 
 [node name="Blood_01" type="Sprite2D" parent="Decoration" unique_id=162848433]
 position = Vector2(3688.986, 190)
@@ -739,7 +745,7 @@ scale = Vector2(1.8619227, 1.3656332)
 texture = ExtResource("43_4ila6")
 
 [node name="Blood_17" type="Sprite2D" parent="Decoration" unique_id=1826699940]
-position = Vector2(3920.9858, 340)
+position = Vector2(3924.9858, 308)
 rotation = 4.712389
 scale = Vector2(1.4601985, 1.0721984)
 texture = ExtResource("43_4ila6")
@@ -749,9 +755,10 @@ position = Vector2(13609.986, 374)
 script = ExtResource("38_rscm6")
 closed_scale = Vector2(3.122559, 3.2166667)
 open_scale = Vector2(0.54725, 0.56988)
+next_scene = "res://scenes/intro_2.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="FinalDoor" unique_id=980233499]
-position = Vector2(-34.499702, -110.500015)
+position = Vector2(-31.999702, -120.000015)
 scale = Vector2(0.6632302, 0.6358268)
 texture = ExtResource("40_wom8k")
 
@@ -800,7 +807,7 @@ script = ExtResource("41_jscgt")
 visible = true
 position = Vector2(-731.99994, -145.00002)
 scale = Vector2(4.1931825, 2.6750007)
-texture = ExtResource("42_0bysi")
+texture = ExtResource("45_0bysi")
 script = ExtResource("43_y0ove")
 on_texture = ExtResource("45_0bysi")
 off_texture = ExtResource("46_y0ove")
@@ -830,7 +837,7 @@ script = ExtResource("41_jscgt")
 visible = true
 position = Vector2(-731.99994, -145.00002)
 scale = Vector2(4.1931825, 2.6750007)
-texture = ExtResource("42_0bysi")
+texture = ExtResource("45_0bysi")
 script = ExtResource("43_y0ove")
 on_texture = ExtResource("45_0bysi")
 off_texture = ExtResource("46_y0ove")
@@ -860,7 +867,7 @@ script = ExtResource("41_jscgt")
 visible = true
 position = Vector2(-731.99994, -145.00002)
 scale = Vector2(4.1931825, 2.6750007)
-texture = ExtResource("42_0bysi")
+texture = ExtResource("45_0bysi")
 script = ExtResource("43_y0ove")
 on_texture = ExtResource("45_0bysi")
 off_texture = ExtResource("46_y0ove")
@@ -890,7 +897,7 @@ script = ExtResource("41_jscgt")
 visible = true
 position = Vector2(-731.99994, -145.00002)
 scale = Vector2(4.1931825, 2.6750007)
-texture = ExtResource("42_0bysi")
+texture = ExtResource("45_0bysi")
 script = ExtResource("43_y0ove")
 on_texture = ExtResource("45_0bysi")
 off_texture = ExtResource("46_y0ove")
@@ -903,7 +910,7 @@ visible = false
 position = Vector2(-744, -152)
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights/Light_05" unique_id=15300618]
-position = Vector2(-762.0135, 493)
+position = Vector2(-754.0135, 501)
 rotation = 0.8220501
 scale = Vector2(5.666849, 5.6592336)
 texture = SubResource("GradientTexture2D_uuj1x")
@@ -920,7 +927,7 @@ script = ExtResource("41_jscgt")
 visible = true
 position = Vector2(-731.99994, -145.00002)
 scale = Vector2(4.1931825, 2.6750007)
-texture = ExtResource("42_0bysi")
+texture = ExtResource("45_0bysi")
 script = ExtResource("43_y0ove")
 on_texture = ExtResource("45_0bysi")
 off_texture = ExtResource("46_y0ove")
@@ -950,7 +957,7 @@ script = ExtResource("41_jscgt")
 visible = true
 position = Vector2(-731.99994, -145.00002)
 scale = Vector2(4.1931825, 2.6750007)
-texture = ExtResource("42_0bysi")
+texture = ExtResource("45_0bysi")
 script = ExtResource("43_y0ove")
 on_texture = ExtResource("45_0bysi")
 off_texture = ExtResource("46_y0ove")
@@ -977,7 +984,7 @@ height = 256.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_01" unique_id=861065022]
 z_index = 1
-position = Vector2(3182.986, 531.00006)
+position = Vector2(3152.5981, 532.5394)
 rotation = -0.050614547
 scale = Vector2(1.035, 1.035)
 skew = -0.27401674
@@ -993,7 +1000,7 @@ position = Vector2(7000, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_04" unique_id=1910881415]
 z_index = 1
-position = Vector2(3220.7642, 510.05695)
+position = Vector2(3207.9858, 505.00006)
 rotation = -0.050614547
 scale = Vector2(1.035, 1.035)
 skew = -0.27401674
@@ -1007,13 +1014,13 @@ texture = ExtResource("36_tdlki")
 [node name="Obstacle_02" type="StaticBody2D" parent="Obstacles" unique_id=1517789675]
 
 [node name="Chair_01" type="Sprite2D" parent="Obstacles/Obstacle_02" unique_id=1725169304]
-position = Vector2(4905.986, 515)
+position = Vector2(4911.986, 500.00006)
 scale = Vector2(0.6846292, 0.6482843)
 texture = ExtResource("36_q0ron")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_02" unique_id=811900677]
 z_index = 1
-position = Vector2(4919.986, 516.99994)
+position = Vector2(4876.537, 521.0358)
 scale = Vector2(1.035, 1.035)
 shape = SubResource("RectangleShape2D_v8pws")
 
@@ -1021,13 +1028,13 @@ shape = SubResource("RectangleShape2D_v8pws")
 position = Vector2(2800, 0)
 
 [node name="Chair_02" type="Sprite2D" parent="Obstacles/Obstacle_03" unique_id=1841233501]
-position = Vector2(4905.986, 515)
+position = Vector2(4903.986, 496.00006)
 scale = Vector2(0.6846292, 0.6482843)
 texture = ExtResource("36_q0ron")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_03" unique_id=440495939]
 z_index = 1
-position = Vector2(4919.986, 516.99994)
+position = Vector2(4856.8135, 521.0179)
 scale = Vector2(1.035, 1.035)
 shape = SubResource("RectangleShape2D_v8pws")
 
@@ -1110,6 +1117,145 @@ theme_override_colors/font_color = Color(0.9, 0.86, 0.72, 1)
 theme_override_font_sizes/font_size = 15
 text = "Presiona Enter para cerrar"
 horizontal_alignment = 1
+
+[node name="SanityHUD" type="CanvasLayer" parent="." unique_id=2124110700]
+layer = 40
+script = ExtResource("57_48b18")
+
+[node name="SanityEffect" type="ColorRect" parent="SanityHUD" unique_id=368695901]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.55, 0, 0, 0)
+
+[node name="SanityPanel" type="Control" parent="SanityHUD" unique_id=635296009]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 22.0
+offset_right = 264.0
+offset_bottom = 70.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="SanityHUD/SanityPanel" unique_id=1176617364]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.45882353, 0.10980392, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("58_88rua")
+theme_override_font_sizes/font_size = 14
+text = "CORDURA"
+metadata/_edit_use_anchors_ = true
+
+[node name="SanityBar" type="ProgressBar" parent="SanityHUD/SanityPanel" unique_id=1937514156]
+modulate = Color(1, 0.050980393, 0.050980393, 1)
+layout_mode = 0
+offset_top = 22.0
+offset_right = 240.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.9607843, 0.047058824, 0.047058824, 1)
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOverScreen" type="Control" parent="SanityHUD" unique_id=38244165]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="SanityHUD/GameOverScreen" unique_id=280509661]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.86)
+
+[node name="Title" type="Label" parent="SanityHUD/GameOverScreen" unique_id=1634053056]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -70.0
+offset_right = 220.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24313726, 0.25882354, 0.18039216, 1)
+theme_override_fonts/font = ExtResource("58_88rua")
+theme_override_font_sizes/font_size = 48
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="SanityHUD/GameOverScreen" unique_id=920615359]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = 18.0
+offset_right = 240.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78, 0.78, 0.84, 1)
+theme_override_fonts/font = ExtResource("59_4ila6")
+theme_override_font_sizes/font_size = 16
+text = "Este lugar llevó al Dr. Evans a perder la cordura debido a múltiples alucionaciones..."
+horizontal_alignment = 1
+
+[node name="Hint" type="Label" parent="SanityHUD/GameOverScreen" unique_id=97453238]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = 70.0
+offset_right = 260.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.72, 0.72, 0.78, 1)
+theme_override_fonts/font = ExtResource("59_4ila6")
+theme_override_font_sizes/font_size = 14
+text = "R para reiniciar / Esc para salir"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SanityHUD/GameOverScreen" unique_id=595407720]
+stream = ExtResource("60_88rua")
+autoplay = true
+parameters/looping = true
+
+[node name="Storm" type="AudioStreamPlayer2D" parent="." unique_id=778818636]
+stream = ExtResource("61_4ila6")
+volume_db = 7.373
+autoplay = true
+max_distance = 100000.0
+attenuation = 0.0
+parameters/looping = true
+
+[node name="Thunders" type="AudioStreamPlayer2D" parent="." unique_id=439964255]
+stream = ExtResource("62_lvvyj")
+volume_db = 10.0
+autoplay = true
+max_distance = 100000.0
+attenuation = 0.0
+parameters/looping = true
 
 [editable path="Lights/Light_01"]
 [editable path="Lights/Light_02"]

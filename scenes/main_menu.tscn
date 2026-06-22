@@ -4,7 +4,8 @@
 [ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_wu84c"]
 [ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="3_8ln24"]
 [ext_resource type="Shader" uid="uid://6qh5qnrt4660" path="res://shaders/glitch.gdshader" id="4_wu84c"]
-[ext_resource type="Texture2D" uid="uid://c27rlqn1dikhr" path="res://assets/cover.png" id="5_cover"]
+[ext_resource type="Texture2D" uid="uid://c27rlqn1dikhr" path="res://assets/sprites/cover.png" id="5_cover"]
+[ext_resource type="AudioStream" uid="uid://dw5wyuky688hb" path="res://assets/Paranoid Truth.mp3" id="6_rtw2f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8ln24"]
 shader = ExtResource("4_wu84c")
@@ -92,3 +93,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.23529412)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1005233812]
+stream = ExtResource("6_rtw2f")
+autoplay = true
+parameters/looping = true

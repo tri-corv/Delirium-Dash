@@ -32,15 +32,19 @@ func _finish_level(player: Node2D) -> void:
 	player_tween.tween_property(player, "scale", player.scale * 0.75, 0.35)
 
 	await player_tween.finished
-	player.queue_free()
 	await get_tree().create_timer(close_delay).timeout
 
-	var close_tween := create_tween()
-	close_tween.tween_callback(func(): sprite.texture = closed_texture)
-	close_tween.tween_callback(func(): sprite.scale = closed_scale)
-	close_tween.tween_property(sprite, "scale", closed_scale * Vector2(0.92, 1.08), 0.08)
-	close_tween.tween_property(sprite, "scale", closed_scale, 0.14)
-	await close_tween.finished
+	await _close_door()
+	player.queue_free()
 
 	if not next_scene.is_empty():
 		get_tree().change_scene_to_file(next_scene)
+
+func _close_door() -> void:
+	sprite.texture = closed_texture
+	sprite.scale = closed_scale
+
+	var close_tween := create_tween()
+	close_tween.tween_property(sprite, "scale", closed_scale * Vector2(0.92, 1.08), 0.08)
+	close_tween.tween_property(sprite, "scale", closed_scale, 0.14)
+	await close_tween.finished

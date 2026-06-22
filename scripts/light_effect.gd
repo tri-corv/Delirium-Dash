@@ -5,10 +5,20 @@ extends Area2D
 @onready var luz = $PointLight2D
 @onready var timer = $Timer
 
+var _player_in_light: Node2D = null
+
 func _ready():
 	timer.timeout.connect(_parpadear)
 	timer.start()
 	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+
+func _process(delta: float) -> void:
+	if _player_in_light == null or not is_instance_valid(_player_in_light):
+		_player_in_light = null
+		return
+
+	_player_in_light.call("take_sanity_damage", sanity_damage * delta)
 
 func _parpadear():
 	luz.energy = randf_range(0.4, 1.3)
@@ -17,4 +27,8 @@ func _parpadear():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and body.has_method("take_sanity_damage"):
-		body.take_sanity_damage(sanity_damage)
+		_player_in_light = body
+
+func _on_body_exited(body: Node2D) -> void:
+	if body == _player_in_light:
+		_player_in_light = null
