@@ -52,8 +52,6 @@
 [ext_resource type="Script" uid="uid://e6scwvrkk0lg" path="res://scripts/flicker_light.gd" id="43_y0ove"]
 [ext_resource type="Texture2D" uid="uid://bree38ycuuty0" path="res://assets/Level 1/light_off_01.png" id="44_awarj"]
 [ext_resource type="Texture2D" uid="uid://wek6j65123sh" path="res://assets/Level 1/light_on_02.png" id="45_0bysi"]
-[ext_resource type="Texture2D" uid="uid://t4am1a0a8c5l" path="res://assets/sprites/door_open.png" id="45_iwav6"]
-[ext_resource type="Texture2D" uid="uid://lv7qlrob108o" path="res://assets/sprites/door_closed.png" id="46_n50md"]
 [ext_resource type="Texture2D" uid="uid://xsbe08ck5gdg" path="res://assets/Level 1/light_off_02.png" id="46_y0ove"]
 [ext_resource type="Script" uid="uid://cpyhyikm484b2" path="res://scripts/note_interaction.gd" id="48_3x5jj"]
 [ext_resource type="Texture2D" uid="uid://dwhct5ctp4pxj" path="res://assets/Level 1/note_01.png" id="49_75ls7"]
@@ -70,8 +68,10 @@ size = Vector2(32161.895, 109.01695)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa552"]
 size = Vector2(8620.749, 76.967064)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4ila6"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_final_door"]
-size = Vector2(237.69531, 1531.0487)
+size = Vector2(139, 306)
 
 [sub_resource type="Gradient" id="Gradient_2e2fo"]
 offsets = PackedFloat32Array(0, 0.53483605, 1)
@@ -94,10 +94,10 @@ position = Vector2(643.014, 230)
 
 [node name="Player" parent="." unique_id=155201999 instance=ExtResource("4_wa552")]
 z_index = 1
-position = Vector2(300, 580)
+position = Vector2(300, 447)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=929911515]
-position = Vector2(0, -65)
+position = Vector2(0, -35)
 zoom = Vector2(1.16, 1.16)
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
@@ -181,140 +181,140 @@ texture = ExtResource("2_5xbjy")
 [node name="FloorCollision" type="StaticBody2D" parent="Background" unique_id=1113779058]
 
 [node name="Floor_01" type="Sprite2D" parent="Background/FloorCollision" unique_id=1652326426]
-position = Vector2(288.76, 298)
+position = Vector2(288.7598, 299.78534)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_19" type="Sprite2D" parent="Background/FloorCollision" unique_id=200224335]
-position = Vector2(-282.483, 298)
+position = Vector2(-282.48254, 299.78497)
 rotation = -3.1415925
 scale = Vector2(0.409363, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_02" type="Sprite2D" parent="Background/FloorCollision" unique_id=98854137]
-position = Vector2(743, 298)
+position = Vector2(742.99994, 299.7849)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_03" type="Sprite2D" parent="Background/FloorCollision" unique_id=1700545550]
-position = Vector2(1199.15, 298)
+position = Vector2(1199.1497, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.27116582, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_04" type="Sprite2D" parent="Background/FloorCollision" unique_id=488374238]
-position = Vector2(1653.892, 298)
+position = Vector2(1653.892, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_05" type="Sprite2D" parent="Background/FloorCollision" unique_id=1500924236]
-position = Vector2(2110.383, 298)
+position = Vector2(2110.383, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_06" type="Sprite2D" parent="Background/FloorCollision" unique_id=132610950]
-position = Vector2(2561.373, 298)
+position = Vector2(2561.373, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_07" type="Sprite2D" parent="Background/FloorCollision" unique_id=422512394]
-position = Vector2(3015.418, 298)
+position = Vector2(3015.418, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_08" type="Sprite2D" parent="Background/FloorCollision" unique_id=1228377167]
-position = Vector2(3469.464, 298)
+position = Vector2(3469.464, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_09" type="Sprite2D" parent="Background/FloorCollision" unique_id=565073090]
-position = Vector2(3924.179, 298)
+position = Vector2(3924.179, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.272445, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_10" type="Sprite2D" parent="Background/FloorCollision" unique_id=1443978754]
-position = Vector2(4380, 298)
+position = Vector2(4380, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_11" type="Sprite2D" parent="Background/FloorCollision" unique_id=2131172767]
-position = Vector2(4835.307, 298)
+position = Vector2(4835.3066, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.27174276, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_12" type="Sprite2D" parent="Background/FloorCollision" unique_id=350864801]
-position = Vector2(5287.48, 298)
+position = Vector2(5287.48, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_13" type="Sprite2D" parent="Background/FloorCollision" unique_id=773501628]
-position = Vector2(5738.471, 298)
+position = Vector2(5738.471, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_14" type="Sprite2D" parent="Background/FloorCollision" unique_id=210562503]
-position = Vector2(6192.868, 298)
+position = Vector2(6192.8677, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.27282134, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_15" type="Sprite2D" parent="Background/FloorCollision" unique_id=802647128]
-position = Vector2(6649.419, 298)
+position = Vector2(6649.419, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.2727502, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_16" type="Sprite2D" parent="Background/FloorCollision" unique_id=1741406553]
-position = Vector2(7099.997, 298)
+position = Vector2(7099.997, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.270338, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_17" type="Sprite2D" parent="Background/FloorCollision" unique_id=1893791763]
-position = Vector2(7555.007, 298)
+position = Vector2(7555.0073, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.2728207, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_18" type="Sprite2D" parent="Background/FloorCollision" unique_id=1512961876]
-position = Vector2(8096.091, 298)
+position = Vector2(8096.091, 299.785)
 rotation = -3.1415925
 scale = Vector2(0.37256533, 0.13504276)
 skew = 0.5672318
 texture = ExtResource("3_4nkto")
 
 [node name="Floor_20" type="Sprite2D" parent="Background/FloorCollision" unique_id=846355969]
-position = Vector2(8762.637, 298)
+position = Vector2(8762.637, 299)
 rotation = -3.1415925
 scale = Vector2(0.42026266, 0.13504276)
 skew = 0.5672318
@@ -752,23 +752,19 @@ scale = Vector2(1.4601985, 1.0721984)
 texture = ExtResource("43_4ila6")
 
 [node name="FinalDoor" type="Area2D" parent="." unique_id=2053158722]
-position = Vector2(13609.986, 275)
-scale = Vector2(0.31, 0.31)
+position = Vector2(13609.986, 374)
 script = ExtResource("38_rscm6")
-closed_texture = ExtResource("46_n50md")
-open_texture = ExtResource("45_iwav6")
-closed_scale = Vector2(0.547, 0.57)
+closed_scale = Vector2(3.122559, 3.2166667)
 open_scale = Vector2(0.54725, 0.56988)
 next_scene = "res://scenes/intro_2.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="FinalDoor" unique_id=980233499]
-position = Vector2(41.934822, -90.3226)
-scale = Vector2(0.539, 0.57)
-texture = ExtResource("45_iwav6")
+position = Vector2(-31.999702, -120.000015)
+scale = Vector2(0.6632302, 0.6358268)
+texture = SubResource("CompressedTexture2D_4ila6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinalDoor" unique_id=52474698]
-position = Vector2(38.703125, 234.47607)
-scale = Vector2(0.99999976, 0.99999976)
+position = Vector2(-0.5, -122)
 shape = SubResource("RectangleShape2D_final_door")
 
 [node name="Lights" type="Node2D" parent="." unique_id=285409959]
@@ -795,10 +791,11 @@ visible = false
 position = Vector2(-1645, -237)
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights/Light_01" unique_id=1546026171]
-position = Vector2(-1642.5, 57.000008)
-scale = Vector2(2.8333337, 3.853333)
+position = Vector2(-1640.3162, 76.174995)
+rotation = 1.5707964
+scale = Vector2(4.1339417, 2.6305115)
 texture = SubResource("GradientTexture2D_uuj1x")
-height = 362.0
+height = 256.0
 
 [node name="Timer" type="Timer" parent="Lights/Light_01" unique_id=1263585659]
 
@@ -974,7 +971,7 @@ visible = false
 position = Vector2(-744, -152)
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights/Light_07" unique_id=552006761]
-position = Vector2(-759.0135, 507)
+position = Vector2(-756.9998, 504)
 rotation = 0.8220501
 scale = Vector2(5.666849, 5.6592336)
 texture = SubResource("GradientTexture2D_uuj1x")
@@ -1134,7 +1131,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.55, 0, 0, 0)
-metadata/_edit_use_anchors_ = true
 
 [node name="SanityPanel" type="Control" parent="SanityHUD" unique_id=635296009]
 layout_mode = 3

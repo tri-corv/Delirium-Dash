@@ -15,11 +15,11 @@
 [ext_resource type="Script" uid="uid://csn0lbgke7y43" path="res://scripts/sanity_hud.gd" id="15_45kkt"]
 [ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="16_taw0e"]
 [ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="17_7egwj"]
-[ext_resource type="AudioStream" uid="uid://dw5wyuky688hb" path="res://assets/sprites/sounds/Paranoid Truth.mp3" id="18_nquw4"]
+[ext_resource type="AudioStream" uid="uid://dw5wyuky688hb" path="res://assets/sounds/Paranoid Truth.mp3" id="18_nquw4"]
 [ext_resource type="Script" uid="uid://cpyhyikm484b2" path="res://scripts/note_interaction.gd" id="19_vwfin"]
 [ext_resource type="Texture2D" uid="uid://dwhct5ctp4pxj" path="res://assets/Level 1/note_01.png" id="21_va6c3"]
-[ext_resource type="AudioStream" uid="uid://byppveua5f1x8" path="res://assets/sprites/sounds/Storm.mp3" id="22_pc3at"]
-[ext_resource type="AudioStream" uid="uid://dimk4rj8pbc3h" path="res://assets/sprites/sounds/Thunders.mp3" id="23_bgibu"]
+[ext_resource type="AudioStream" uid="uid://byppveua5f1x8" path="res://assets/sounds/Storm.mp3" id="22_pc3at"]
+[ext_resource type="AudioStream" uid="uid://dimk4rj8pbc3h" path="res://assets/sounds/Thunders.mp3" id="23_bgibu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
 size = Vector2(32161.895, 109.01695)

@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="3_8ln24"]
 [ext_resource type="Shader" uid="uid://6qh5qnrt4660" path="res://shaders/glitch.gdshader" id="4_wu84c"]
 [ext_resource type="Texture2D" uid="uid://c27rlqn1dikhr" path="res://assets/sprites/cover.png" id="5_cover"]
-[ext_resource type="AudioStream" uid="uid://dw5wyuky688hb" path="res://assets/sprites/sounds/Paranoid Truth.mp3" id="6_rtw2f"]
+[ext_resource type="AudioStream" uid="uid://dw5wyuky688hb" path="res://assets/sounds/Paranoid Truth.mp3" id="6_rtw2f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8ln24"]
 shader = ExtResource("4_wu84c")

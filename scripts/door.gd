@@ -1,11 +1,12 @@
 extends Area2D
 
-@export var closed_texture: Texture2D = preload("res://assets/Level 1/door_04.png")
-@export var open_texture: Texture2D = preload("res://assets/Level 1/door_opened.png")
+@export var closed_texture: Texture2D = preload("res://assets/sprites/door_open.png")
+@export var open_texture: Texture2D = preload("res://assets/sprites/door_closed.png")
 @export var closed_scale: Vector2 = Vector2.ONE
 @export var open_scale: Vector2 = Vector2.ONE
 @export var close_delay: float = 0.45
 @export var next_scene: String = ""
+@export var camera_lift: float = 90.0
 
 @onready var sprite: Sprite2D = $Sprite2D
 
@@ -26,10 +27,13 @@ func _finish_level(player: Node2D) -> void:
 	_is_finishing = true
 	player.freeze()
 
+	var camera := player.get_node_or_null("Camera2D") as Camera2D
 	var player_tween := create_tween()
 	player_tween.set_parallel(true)
 	player_tween.tween_property(player, "modulate:a", 0.0, 0.35)
 	player_tween.tween_property(player, "scale", player.scale * 0.75, 0.35)
+	if camera != null:
+		player_tween.tween_property(camera, "position:y", camera.position.y - camera_lift, 0.35)
 
 	await player_tween.finished
 	await get_tree().create_timer(close_delay).timeout
