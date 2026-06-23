@@ -423,7 +423,7 @@ position = Vector2(13609.986, 227)
 script = ExtResource("5_1sb0y")
 closed_scale = Vector2(0.18, 0.18)
 open_scale = Vector2(0.18, 0.18)
-next_scene = "res://scenes/intro_2.tscn"
+next_scene = "res://scenes/intro_3.tscn"
 camera_lift = 0.0
 required_clues = 4
 
