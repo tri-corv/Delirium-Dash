@@ -1,5 +1,7 @@
 extends Area2D
 
+signal completed(note: Area2D)
+
 @export var note_texture: Texture2D
 @export var prompt_text: String = "Presiona E para leer"
 
@@ -51,3 +53,4 @@ func _close_note() -> void:
 
 	monitoring = false
 	prompt.hide()
+	completed.emit(self)

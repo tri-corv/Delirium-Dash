@@ -8,8 +8,8 @@ el caso. El paciente 509. Un asesino. Un culpable.
 Una historia completa.
 Las historias completas no suelen encontrarse en
 hospitales abandonados."
-@export_multiline var objetivo: String = "> Evita ser sedado
-> Encuentra la Note 2
+@export_multiline var objetivo: String = "> Encuentra las pistas 4/4
+> No dejes que las alucinaciones te derroten
 > Escapa del laboratorio"
 @export_file("*.tscn") var siguiente_escena: String = "res://scenes/level_2.tscn"
 

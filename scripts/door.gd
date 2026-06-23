@@ -7,10 +7,12 @@ extends Area2D
 @export var close_delay: float = 0.45
 @export var next_scene: String = ""
 @export var camera_lift: float = 90.0
+@export var required_clues: int = 0
 
 @onready var sprite: Sprite2D = $Sprite2D
 
 var _is_finishing := false
+var _found_clues := 0
 
 func _ready() -> void:
 	sprite.texture = open_texture
@@ -21,7 +23,17 @@ func _on_body_entered(body: Node2D) -> void:
 	if _is_finishing or not body.is_in_group("player"):
 		return
 
+	if not is_unlocked():
+		return
+
 	_finish_level(body)
+
+func set_clue_progress(found: int, total: int) -> void:
+	_found_clues = found
+	required_clues = total
+
+func is_unlocked() -> bool:
+	return required_clues <= 0 or _found_clues >= required_clues
 
 func _finish_level(player: Node2D) -> void:
 	_is_finishing = true

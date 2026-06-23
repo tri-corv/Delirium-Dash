@@ -8,6 +8,7 @@ signal sanity_depleted
 @export var obstacle_sanity_damage: float = 25.0
 @export var obstacle_damage_cooldown: float = 0.8
 @export var manual_move_speed: float = 320.0
+@export var free_arrow_movement: bool = false
 
 const MOVE_SPEED: float = 280.0
 const JUMP_FORCE: float = -700.0
@@ -29,17 +30,20 @@ func _physics_process(delta: float) -> void:
 	if is_dead or is_paused:
 		return
 
-	if not is_on_floor() and not is_on_ceiling():
-		velocity.y += GRAVITY * gravity_direction * delta
-
-	if _manual_horizontal_enabled:
-		velocity.x = _get_horizontal_input() * manual_move_speed
-	elif _auto_run_enabled:
-		velocity.x = MOVE_SPEED
+	if free_arrow_movement:
+		velocity = _get_arrow_input_vector() * manual_move_speed
 	else:
-		velocity.x = 0.0
+		if not is_on_floor() and not is_on_ceiling():
+			velocity.y += GRAVITY * gravity_direction * delta
 
-	if not _manual_horizontal_enabled and Input.is_action_just_pressed("jump"):
+		if _manual_horizontal_enabled:
+			velocity.x = _get_horizontal_input() * manual_move_speed
+		elif _auto_run_enabled:
+			velocity.x = MOVE_SPEED
+		else:
+			velocity.x = 0.0
+
+	if not free_arrow_movement and not _manual_horizontal_enabled and Input.is_action_just_pressed("jump"):
 		if gravity_mode:
 			_flip_gravity()
 		else:
@@ -95,6 +99,20 @@ func _get_horizontal_input() -> float:
 		direction += 1.0
 
 	return clampf(direction, -1.0, 1.0)
+
+func _get_arrow_input_vector() -> Vector2:
+	var direction := Vector2.ZERO
+
+	if Input.is_key_pressed(KEY_LEFT):
+		direction.x -= 1.0
+	if Input.is_key_pressed(KEY_RIGHT):
+		direction.x += 1.0
+	if Input.is_key_pressed(KEY_UP):
+		direction.y -= 1.0
+	if Input.is_key_pressed(KEY_DOWN):
+		direction.y += 1.0
+
+	return direction.normalized()
 
 func _apply_obstacle_collision_damage() -> void:
 	if _obstacle_damage_timer > 0.0:

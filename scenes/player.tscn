@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7tqcecwdjvjp" path="res://assets/sprites/player.png" id="2_xu26u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
-size = Vector2(25.600006, 65.899994)
+size = Vector2(25.600006, 10.199997)
 
 [node name="Player" type="CharacterBody2D" unique_id=155201999 groups=["player"]]
 position = Vector2(320, 626)
@@ -23,7 +23,7 @@ color = Color(0.2, 0.85, 0.58, 1)
 polygon = PackedVector2Array(-14, -14, 14, -14, 14, 14, -14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404403226]
-position = Vector2(-46.000008, -32.249996)
+position = Vector2(-46.000008, -4.400009)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_3vyb7")
 
