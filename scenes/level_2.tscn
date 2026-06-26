@@ -54,7 +54,7 @@ size = Vector2(57.50705, 647)
 size = Vector2(8936.033, 44.5408)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_final_door"]
-size = Vector2(133.5, 232)
+size = Vector2(133.5, 429)
 
 [sub_resource type="Gradient" id="Gradient_2e2fo"]
 offsets = PackedFloat32Array(0, 0.53483605, 1)
@@ -423,7 +423,7 @@ position = Vector2(13609.986, 227)
 script = ExtResource("5_1sb0y")
 closed_scale = Vector2(0.18, 0.18)
 open_scale = Vector2(0.18, 0.18)
-next_scene = "res://scenes/intro_3.tscn"
+next_scene = "res://scenes/end_demo.tscn"
 camera_lift = 0.0
 required_clues = 4
 
@@ -433,7 +433,7 @@ scale = Vector2(0.17968631, 0.17327963)
 texture = ExtResource("40_tv75f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinalDoor" unique_id=52474698]
-position = Vector2(7, -18)
+position = Vector2(7, 80.5)
 shape = SubResource("RectangleShape2D_final_door")
 
 [node name="Lights" type="Node2D" parent="." unique_id=285409959]

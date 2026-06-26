@@ -9,6 +9,12 @@ var frascos_collected: int = 0
 var current_pabellon: int = 0
 var narrative_unlocked: Array[String] = []
 
+func reset_run() -> void:
+	crisis_count = 0
+	frascos_collected = 0
+	current_pabellon = 0
+	narrative_unlocked.clear()
+
 func register_crisis() -> void:
 	crisis_count += 1
 	emit_signal("crisis_happened")

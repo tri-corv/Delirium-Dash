@@ -87,7 +87,7 @@ fill = 2
 size = Vector2(17.05687, 94.720604)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwsl1"]
-size = Vector2(110, 192)
+size = Vector2(110, 388)
 
 [node name="Level1" type="Node2D" unique_id=462765882]
 position = Vector2(643.014, 230)
@@ -1049,7 +1049,7 @@ script = ExtResource("48_3x5jj")
 note_texture = ExtResource("49_75ls7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoteInteraction" unique_id=1427120045]
-position = Vector2(2, -17)
+position = Vector2(2, 81)
 shape = SubResource("RectangleShape2D_gwsl1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="NoteInteraction" unique_id=926267957]

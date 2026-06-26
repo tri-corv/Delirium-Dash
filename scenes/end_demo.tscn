@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://djx04d3ow5lup"]
+
+[ext_resource type="Script" uid="uid://b2k9qtn3v8lae" path="res://scripts/end_demo.gd" id="1_f12m2"]
+[ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_f33ir"]
+[ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="3_t4rfq"]
+
+[node name="end_demo" type="CanvasLayer" unique_id=10750747]
+script = ExtResource("1_f12m2")
+
+[node name="Control" type="Control" parent="." unique_id=1245733619]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1580697783]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="Label" parent="Control" unique_id=1136776392]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 51.0
+offset_top = 300.0
+offset_right = -45.0
+offset_bottom = 350.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.25882354, 0.18039216, 1)
+theme_override_fonts/font = ExtResource("2_f33ir")
+theme_override_font_sizes/font_size = 32
+text = "CONTINUARA..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Prompt" type="Label" parent="Control" unique_id=1859857360]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = -229.0
+offset_right = -62.0
+offset_bottom = -189.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.64, 0.64, 0.7, 1)
+theme_override_fonts/font = ExtResource("3_t4rfq")
+theme_override_font_sizes/font_size = 14
+text = "R para reiniciar / Esc para salir"
+horizontal_alignment = 1
+vertical_alignment = 1
