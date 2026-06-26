@@ -33,7 +33,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _return_to_main_menu() -> void:
 	_transition_started = true
-	GameManager.reset_run()
 
 	var fade_out := create_tween()
 	fade_out.tween_property(control, "modulate:a", 0.0, 0.45)

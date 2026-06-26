@@ -34,7 +34,7 @@ func _disparar_parpadeo() -> void:
 	tween.tween_property(flicker_material, "shader_parameter/glitch_intensity", randf_range(0.0, 0.35), randf_range(0.08, 0.22))
 	tween.tween_property(flicker_material, "shader_parameter/glitch_intensity", 0.0, randf_range(0.12, 0.35))
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("ui_accept"):
 		_comenzar_juego()
 

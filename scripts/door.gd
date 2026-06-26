@@ -6,7 +6,7 @@ extends Area2D
 @export var open_scale: Vector2 = Vector2.ONE
 @export var close_delay: float = 0.45
 @export var next_scene: String = ""
-@export var camera_lift: float = 90.0
+@export var camera_lift: float = 0.0
 @export var required_clues: int = 0
 
 @onready var sprite: Sprite2D = $Sprite2D

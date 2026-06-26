@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://djx04d3ow5lup"]
 
-[ext_resource type="Script" uid="uid://b2k9qtn3v8lae" path="res://scripts/end_demo.gd" id="1_f12m2"]
+[ext_resource type="Script" uid="uid://b2laqtn3v8lae" path="res://scripts/end_demo.gd" id="1_f12m2"]
 [ext_resource type="FontFile" uid="uid://2dg3ptqvlag3" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_f33ir"]
 [ext_resource type="FontFile" uid="uid://ckai62fdwc7wq" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="3_t4rfq"]
+[ext_resource type="AudioStream" uid="uid://dw5wyuky688hb" path="res://assets/sounds/Paranoid Truth.mp3" id="4_f12m2"]
 
 [node name="end_demo" type="CanvasLayer" unique_id=10750747]
 script = ExtResource("1_f12m2")
@@ -58,3 +59,7 @@ theme_override_font_sizes/font_size = 14
 text = "R para reiniciar / Esc para salir"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=177971525]
+stream = ExtResource("4_f12m2")
+autoplay = true

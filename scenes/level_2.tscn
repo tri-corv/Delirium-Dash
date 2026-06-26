@@ -51,7 +51,7 @@ size = Vector2(33469.71, 109.01695)
 size = Vector2(57.50705, 647)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa552"]
-size = Vector2(8936.033, 44.5408)
+size = Vector2(9030.699, 44.5408)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_final_door"]
 size = Vector2(133.5, 429)
@@ -317,6 +317,11 @@ position = Vector2(-343.517, 199.29933)
 scale = Vector2(0.6273454, 0.4659437)
 shape = SubResource("RectangleShape2D_osflp")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Background/FloorCollision" unique_id=2033655948]
+position = Vector2(8724.914, 166.91626)
+scale = Vector2(0.6273454, 0.4659437)
+shape = SubResource("RectangleShape2D_osflp")
+
 [node name="CeilingCollision" type="StaticBody2D" parent="Background" unique_id=1054082689]
 
 [node name="Ceiling_01" type="Sprite2D" parent="Background/CeilingCollision" unique_id=791370293]
@@ -415,7 +420,7 @@ scale = Vector2(0.3350233, 0.1)
 texture = ExtResource("4_wo48x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/CeilingCollision" unique_id=992938882]
-position = Vector2(4156.586, 199.06635)
+position = Vector2(4203.919, 199.06633)
 shape = SubResource("RectangleShape2D_wa552")
 
 [node name="FinalDoor" type="Area2D" parent="." unique_id=2053158722]
@@ -424,7 +429,6 @@ script = ExtResource("5_1sb0y")
 closed_scale = Vector2(0.18, 0.18)
 open_scale = Vector2(0.18, 0.18)
 next_scene = "res://scenes/end_demo.tscn"
-camera_lift = 0.0
 required_clues = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="FinalDoor" unique_id=980233499]
