@@ -1,34 +1,15 @@
-extends Area2D
+extends Area2D # Area que contiene una luz parpadeante.
 
-@export var sanity_damage: float = 25.0
+@onready var luz: PointLight2D = $PointLight2D # Luz que cambia de intensidad.
+@onready var timer: Timer = $Timer # Temporizador que controla cada parpadeo.
 
-@onready var luz: PointLight2D = $PointLight2D
-@onready var timer: Timer = $Timer
-
-var _player_in_light: Node2D = null
-
+# Arranca el parpadeo de la luz.
 func _ready() -> void:
-	timer.timeout.connect(_parpadear)
-	timer.start()
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
+	timer.timeout.connect(_parpadear) # Cada timeout cambia la energia de la luz.
+	timer.start() # Inicia el temporizador.
 
-func _process(delta: float) -> void:
-	if _player_in_light == null or not is_instance_valid(_player_in_light):
-		_player_in_light = null
-		return
-
-	_player_in_light.call("take_sanity_damage", sanity_damage * delta)
-
+# Cambia intensidad y duracion del siguiente parpadeo.
 func _parpadear() -> void:
-	luz.energy = randf_range(0.4, 1.3)
-	timer.wait_time = randf_range(0.05, 0.25)
-	timer.start()
-
-func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and body.has_method("take_sanity_damage"):
-		_player_in_light = body
-
-func _on_body_exited(body: Node2D) -> void:
-	if body == _player_in_light:
-		_player_in_light = null
+	luz.energy = randf_range(0.4, 1.3) # Define una intensidad aleatoria.
+	timer.wait_time = randf_range(0.05, 0.25) # Define cuanto tarda el proximo cambio.
+	timer.start() # Reinicia el temporizador.

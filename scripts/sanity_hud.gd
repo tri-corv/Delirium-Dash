@@ -1,63 +1,61 @@
-extends CanvasLayer
+extends CanvasLayer # Interfaz de cordura y pantalla de game over.
 
-@onready var sanity_bar: ProgressBar = $SanityPanel/SanityBar
-@onready var sanity_effect: ColorRect = $SanityEffect
-@onready var game_over_screen: Control = $GameOverScreen
-@onready var game_over_audio: AudioStreamPlayer2D = $GameOverScreen/AudioStreamPlayer2D
+const EFFECT_COLOR := Color(0.55, 0.0, 0.0, 0.0) # Color base del efecto de baja cordura.
 
-var _camera: Camera2D = null
-var _camera_base_offset := Vector2.ZERO
-var _camera_base_rotation := 0.0
-var _camera_base_zoom := Vector2.ONE
-var _stress := 0.0
-var _pulse := 0.0
-var _last_sanity := -1.0
-var _player: Node = null
+@onready var sanity_bar: ProgressBar = $SanityPanel/SanityBar # Barra que muestra la cordura.
+@onready var sanity_effect: ColorRect = $SanityEffect # Capa roja que aparece al perder cordura.
+@onready var game_over_screen: Control = $GameOverScreen # Pantalla que aparece al perder.
+@onready var game_over_audio: AudioStreamPlayer2D = $GameOverScreen/AudioStreamPlayer2D # Sonido del game over.
 
+var regen_label: Label = null # Texto que muestra el contador de recuperacion.
+var _player: Node = null # Jugador conectado al HUD.
+var _camera: Camera2D = null # Camara del jugador para aplicar sacudida.
+var _camera_base_offset := Vector2.ZERO # Offset original de la camara.
+var _stress := 0.0 # Intensidad del efecto segun la cordura perdida.
+var _pulse := 0.0 # Golpe visual breve cuando baja la cordura.
+var _last_sanity := -1.0 # Ultima cordura recibida.
+
+# Configura la interfaz al iniciar.
 func _ready() -> void:
 	game_over_screen.hide()
 	game_over_audio.stop()
 	game_over_audio.attenuation = 0.0
 	game_over_audio.max_distance = 100000.0
-	sanity_effect.color = Color(0.55, 0.0, 0.0, 0.0)
-	sanity_bar.max_value = 100.0
-	sanity_bar.value = 100.0
-
+	sanity_effect.color = EFFECT_COLOR
+	_create_regen_label()
 	_connect_to_player()
 
+# Busca al jugador y conecta sus senales de cordura.
 func _connect_to_player() -> void:
-	var player := get_tree().get_first_node_in_group("player")
-	if player == null:
+	_player = get_tree().get_first_node_in_group("player")
+	if _player == null:
 		return
 
-	if player == _player:
-		return
-
-	_player = player
-	_camera = player.get_node_or_null("Camera2D")
+	_camera = _player.get_node_or_null("Camera2D")
 	if _camera != null:
 		_camera_base_offset = _camera.offset
-		_camera_base_rotation = _camera.rotation
-		_camera_base_zoom = _camera.zoom
 
-	if player.has_signal("sanity_changed") and not player.is_connected("sanity_changed", _on_sanity_changed):
-		player.connect("sanity_changed", _on_sanity_changed)
-	if player.has_signal("sanity_depleted") and not player.is_connected("sanity_depleted", _on_sanity_depleted):
-		player.connect("sanity_depleted", _on_sanity_depleted)
+	_player.connect("sanity_changed", _on_sanity_changed)
+	_player.connect("sanity_depleted", _on_sanity_depleted)
+	_player.connect("sanity_regen_timer_changed", _on_sanity_regen_timer_changed)
+	_on_sanity_changed(_player.get("sanity"), _player.get("max_sanity"))
 
-	var current_sanity = player.get("sanity")
-	var maximum_sanity = player.get("max_sanity")
-	if current_sanity != null and maximum_sanity != null:
-		_on_sanity_changed(current_sanity, maximum_sanity)
+# Crea un texto debajo de la barra para mostrar el contador.
+func _create_regen_label() -> void:
+	regen_label = Label.new()
+	regen_label.position = Vector2(0, 50)
+	regen_label.size = Vector2(260, 22)
+	regen_label.text = "Recuperacion en: 5s"
+	regen_label.add_theme_font_size_override("font_size", 12)
+	regen_label.add_theme_color_override("font_color", Color(0.8, 0.9, 0.9, 1.0))
+	$SanityPanel.add_child(regen_label)
 
+# Actualiza el pulso y el efecto visual.
 func _process(delta: float) -> void:
-	if _player == null or not is_instance_valid(_player):
-		_player = null
-		_connect_to_player()
-
 	_pulse = maxf(_pulse - delta, 0.0)
-	_update_screen_effect(delta)
+	_update_screen_effect()
 
+# Actualiza la barra cuando cambia la cordura.
 func _on_sanity_changed(current: float, maximum: float) -> void:
 	sanity_bar.max_value = maximum
 	sanity_bar.value = current
@@ -65,52 +63,43 @@ func _on_sanity_changed(current: float, maximum: float) -> void:
 	if maximum <= 0.0:
 		return
 
-	var previous_sanity := _last_sanity
-	_last_sanity = current
 	_stress = clampf(1.0 - (current / maximum), 0.0, 1.0)
-
-	if previous_sanity >= 0.0 and current < previous_sanity:
+	if _last_sanity >= 0.0 and current < _last_sanity:
 		_pulse = 1.25
 
+	_last_sanity = current
+
+# Actualiza el contador visible de recuperacion.
+func _on_sanity_regen_timer_changed(seconds_left: int) -> void:
+	if regen_label != null:
+		regen_label.text = "Recuperacion en: %ds" % seconds_left
+
+# Muestra la pantalla de derrota.
 func _on_sanity_depleted() -> void:
 	game_over_screen.show()
-	_play_game_over_audio()
 	_pulse = 2.0
 
-func _play_game_over_audio() -> void:
-	if _camera != null and is_instance_valid(_camera):
+	if _camera != null:
 		game_over_audio.global_position = _camera.global_position
-	elif _player != null and is_instance_valid(_player):
-		game_over_audio.global_position = _player.global_position
-
 	if not game_over_audio.playing:
 		game_over_audio.play()
 
-func _update_screen_effect(_delta: float) -> void:
+# Aplica el color rojo y una sacudida simple de camara.
+func _update_screen_effect() -> void:
 	var pulse_strength := clampf(_pulse, 0.0, 1.0)
 	var red_alpha := clampf((_stress * 0.22) + (pulse_strength * 0.32), 0.0, 0.55)
-	var darkness := clampf(_stress * 0.16, 0.0, 0.24)
-	sanity_effect.color = Color(0.55 + darkness, 0.0, 0.0, red_alpha)
+	sanity_effect.color = Color(EFFECT_COLOR.r, EFFECT_COLOR.g, EFFECT_COLOR.b, red_alpha)
 
-	if _camera == null or not is_instance_valid(_camera):
-		_camera = null
+	if _camera == null:
 		return
 
-	var shake := (_stress * 3.0) + (pulse_strength * 7.0)
+	var shake := (_stress * 3.0) + (pulse_strength * 7.0) # shake de camara
 	if shake <= 0.05:
 		_camera.offset = _camera_base_offset
-		_camera.rotation = _camera_base_rotation
-		_camera.zoom = _camera_base_zoom
-		return
+	else:
+		_camera.offset = _camera_base_offset + Vector2(randf_range(-shake, shake), randf_range(-shake, shake))
 
-	var zoom_noise := randf_range(-0.012, 0.012) * (_stress + pulse_strength)
-	_camera.offset = _camera_base_offset + Vector2(
-		randf_range(-shake, shake),
-		randf_range(-shake, shake)
-	)
-	_camera.rotation = _camera_base_rotation + randf_range(-0.012, 0.012) * (_stress + pulse_strength)
-	_camera.zoom = _camera_base_zoom + Vector2(zoom_noise, -zoom_noise)
-
+# Permite reiniciar o salir cuando el game over esta visible.
 func _unhandled_input(event: InputEvent) -> void:
 	if not game_over_screen.visible or not (event is InputEventKey):
 		return
@@ -120,12 +109,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 
 	if key_event.keycode == KEY_R:
-		_restart_game()
+		get_tree().reload_current_scene() # o change_scene_to_file("res://scenes/main_menu.tscn")
 	elif key_event.keycode == KEY_ESCAPE:
-		_quit_game()
-
-func _restart_game() -> void:
-	get_tree().reload_current_scene()
-
-func _quit_game() -> void:
-	get_tree().quit()
+		get_tree().quit()

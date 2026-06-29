@@ -63,6 +63,7 @@
 [ext_resource type="AudioStream" uid="uid://dw5wyuky688hb" path="res://assets/sounds/Paranoid Truth.mp3" id="60_88rua"]
 [ext_resource type="AudioStream" uid="uid://byppveua5f1x8" path="res://assets/sounds/Storm.mp3" id="61_4ila6"]
 [ext_resource type="AudioStream" uid="uid://dimk4rj8pbc3h" path="res://assets/sounds/Thunders.mp3" id="62_lvvyj"]
+[ext_resource type="Script" uid="uid://c3pck6ycsklox" path="res://scripts/obstacle.gd" id="63_obstacle"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
 size = Vector2(32161.895, 109.01695)
@@ -85,6 +86,12 @@ fill = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8pws"]
 size = Vector2(17.05687, 94.720604)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chair_obstacle"]
+size = Vector2(95, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chair_damage"]
+size = Vector2(180, 150)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwsl1"]
 size = Vector2(110, 388)
@@ -994,6 +1001,16 @@ scale = Vector2(1.035, 1.035)
 skew = -0.27401674
 shape = SubResource("RectangleShape2D_v8pws")
 
+[node name="DamageArea" type="Area2D" parent="Obstacles/Obstacle_01" unique_id=1875529645]
+position = Vector2(3152.5981, 532.5394)
+rotation = -0.050614547
+scale = Vector2(1.035, 1.035)
+skew = -0.27401674
+script = ExtResource("63_obstacle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_01/DamageArea" unique_id=684065244]
+shape = SubResource("RectangleShape2D_v8pws")
+
 [node name="Gurney_01" type="Sprite2D" parent="Obstacles/Obstacle_01" unique_id=1622362329]
 position = Vector2(3187.9863, 538)
 scale = Vector2(1.8, 1.8)
@@ -1010,6 +1027,16 @@ scale = Vector2(1.035, 1.035)
 skew = -0.27401674
 shape = SubResource("RectangleShape2D_v8pws")
 
+[node name="DamageArea" type="Area2D" parent="Obstacles/Obstacle_04" unique_id=404501804]
+position = Vector2(3207.9858, 505.00006)
+rotation = -0.050614547
+scale = Vector2(1.035, 1.035)
+skew = -0.27401674
+script = ExtResource("63_obstacle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_04/DamageArea" unique_id=1930939755]
+shape = SubResource("RectangleShape2D_v8pws")
+
 [node name="Gurney_01" type="Sprite2D" parent="Obstacles/Obstacle_04" unique_id=1342636587]
 position = Vector2(3216.9863, 492)
 scale = Vector2(1.8, 1.8)
@@ -1024,9 +1051,16 @@ texture = ExtResource("36_q0ron")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_02" unique_id=811900677]
 z_index = 1
-position = Vector2(4876.537, 521.0358)
-scale = Vector2(1.035, 1.035)
-shape = SubResource("RectangleShape2D_v8pws")
+position = Vector2(4911.986, 584)
+shape = SubResource("RectangleShape2D_chair_obstacle")
+
+[node name="DamageArea" type="Area2D" parent="Obstacles/Obstacle_02" unique_id=1128686733]
+position = Vector2(4911.986, 570)
+collision_layer = 0
+script = ExtResource("63_obstacle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_02/DamageArea" unique_id=1704952049]
+shape = SubResource("RectangleShape2D_chair_damage")
 
 [node name="Obstacle_03" type="StaticBody2D" parent="Obstacles" unique_id=451250221]
 position = Vector2(2800, 0)
@@ -1038,9 +1072,16 @@ texture = ExtResource("36_q0ron")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_03" unique_id=440495939]
 z_index = 1
-position = Vector2(4856.8135, 521.0179)
-scale = Vector2(1.035, 1.035)
-shape = SubResource("RectangleShape2D_v8pws")
+position = Vector2(4903.986, 584)
+shape = SubResource("RectangleShape2D_chair_obstacle")
+
+[node name="DamageArea" type="Area2D" parent="Obstacles/Obstacle_03" unique_id=1702994944]
+position = Vector2(4903.986, 570)
+collision_layer = 0
+script = ExtResource("63_obstacle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Obstacle_03/DamageArea" unique_id=1495289723]
+shape = SubResource("RectangleShape2D_chair_damage")
 
 [node name="NoteInteraction" type="Area2D" parent="." unique_id=365208396]
 z_index = 2
